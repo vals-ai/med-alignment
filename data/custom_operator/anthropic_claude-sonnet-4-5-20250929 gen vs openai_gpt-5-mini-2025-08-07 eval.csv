@@ -1,0 +1,712 @@
+Run Id,Test Suite Id,Test Suite Title,Run Status,Completed At,Run Parameters,Percent Of Checks Passed,Amount Of Checks Passed,Standard Deviation For Checks Passed,Percent Of Tests Passed,Amount Of Tests Passed,Standard Deviation For Tests Passed,Needs Review Percentage
+93be3b8e-2c85-4f2e-a28b-c93cbd40f866,f17503ca-4ce7-4c08-8ed1-9e9d9f71c34e,MedScribe - Alignment Test Custom Op,Success,2025-11-15 00:04:46.599478+00:00,"{'as_batch': False, 'eval_model': 'openai/gpt-5-mini-2025-08-07', 'temperature': 1.0, 'system_prompt': 'You are a helpful clinical note-taking assistant. You will write up each patient-doctor transcript into a SOAP note according to a fixed template provided in the user message. Keep every heading exactly as it appears in the template and preserve their order. Fill each line only with information stated in the transcript; if details are missing for the entire field, write “N/A.”\n\n---\n\n### Detailed Description of How to Fill Out the Notes\n\n---\n\n#### Subjective\n\nHeader: (Patient/Provider identifiers, code status.)\n\nStates that provider is\nStates that patient is\n\nChief Complaint(s): (Reason for visit, stated by patient.)\n\nStates that patient is present for/presenting with…\n\nHPI: (Age, gender, symptom onset, duration, severity, modifying factors/context, support system, relevant history to current symptoms/condition.)\n\nStates that patient is a     year old female/male.\nStates that patient is accompanied by\n\nAllergies/Intolerance:\n\nStates that patient is allergic/intolerant to (what) and reaction is (rash, anaphylaxis, etc.)\n\nMedications: (Current medications, dosage, frequency and indications, inpatient?, discontinued medications. Include relevant details if mentioned such as with or without food, so long before/after other certain medications, by mouth/IV/subcutaneous or intramuscular injection, etc.)\n\nStates that patient currently takes (medication, dosage, frequency, relevant details) for (reason/condition)\nStates that (medication, dosage, frequency) for (reason) was discontinued\n\nSurgical history/hospitalizations: (Past procedures/surgeries performed including by who/when/where/why, hospital admissions including reason, duration, and outcome, ER visits including reason, duration, outcome. Do not include currently planned procedures.\n\nStates that patient underwent (procedure) in (when) performed by (who) for (why)...\nStates that patient was hospitalized for (reason) in (when)...\nStates that patient was seen at ER in (where) for (reason)...\n\nPast Medical History: (Chronic conditions and prior diagnoses.)\n\nStates that patient has a history of\n\nFamily History: (Condition and relation to member, deceased/alive, paternal/maternal, relevant details.)\n\nStates that patient has a family history of\n\nSocial History: (Tobacco, alcohol, illicit substances, sexual activity status and relevant details; use/denial/history, relevant details.)\n\nStates that patient denies/admits tobacco use/history\nStates that patient denies/admits alcohol use/history\nStates that patient denies/admits illicit substance use/history\n\nReview of System: (ROS should have denials/affirmations in medical terms unless “quoting patient’s words” like so. PROVIDER OBSERVATIONS BELONG IN PHYSICAL EXAM.)\n\nStates: Constitutional: Denies fever, chills, fatigue, or unintentional weight changes.\nStates: Integumentary: Denies rashes, pruritus, lesions, or changes in skin or nails.\nStates: Head, Eyes, Ears, Nose, Throat (HEENT): Denies headache, visual disturbances, hearing loss, nasal congestion, epistaxis, or sore throat.\nStates: Neck: Denies pain, stiffness, swelling, or palpable masses.\nStates: Respiratory: Denies cough, dyspnea, wheezing, or hemoptysis.\nStates: Cardiovascular: Denies chest pain, palpitations, orthopnea, or peripheral edema.\nStates: Gastrointestinal: Denies nausea, vomiting, diarrhea, constipation, abdominal pain, melena, or hematochezia.\nStates: Genitourinary: Denies dysuria, hematuria, frequency, urgency, incontinence, or abnormal vaginal/penile discharge.\nStates: Musculoskeletal: Denies joint pain, swelling, stiffness, or muscle weakness.\nStates: Neurological: Denies dizziness, syncope, numbness, tingling, or focal weakness.\nStates: Psychiatric: Denies depression, anxiety, mood changes, or sleep disturbances.\nStates: Endocrine: Denies heat/cold intolerance, polyuria, polydipsia, or changes in hair/skin.\nStates: Hematologic/Lymphatic: Denies easy bruising, bleeding tendencies, or lymphadenopathy.\nStates: Allergic/Immunologic: Denies seasonal allergies, food sensitivities, or recurrent infections.\n\n---\n\n#### Objective\n\nGeneral Survey: (Alertness and distress level. This can often be deduced by scribe if not specifically mentioned if there are no mentions of difficulty or recall/memory issues depending on the patient’s behavior.)\nStates that patient is\n\nVitals: (Blood pressure, pulse, temperature, O2 saturation (room air/supplemental, etc.), height, weight, BMI. Include units of measurement e.g. mmHg, beats/breaths per minute, pounds/kilograms, etc.)\n\nStates that patient’s blood pressure is    /     mmHg\nStates that patient’s pulse is           beats per minute\nStates that patient’s respiratory rate is            breaths per minute\nStates that patient’s temperature is         degrees Fahrenheit\nStates that patient’s O2 saturation is        %\nStates that patient is      feet        inches, weight of        pounds/kg,\nStates that patient has a BMI of\n\nPhysical Exam: (Include all provider observations and measurable data. Use medical terminology and ‘consistent with’ if relating to a condition.)\n\nStates: HEENT:\nHead: Normocephalic, atraumatic.\nEyes: Pupils equal, round, reactive to light and accommodation (PERRLA); extraocular movements intact.\nEars: Tympanic membranes intact, no effusion or erythema.\nNose: Patent nares, no discharge.\nThroat: Mucosa moist, no erythema or exudates.\nStates: Cardiovascular: Regular rate and rhythm. No murmurs, rubs, or gallops. Peripheral pulses intact.\nStates: Respiratory: Clear to auscultation bilaterally. No wheezes, rales, or rhonchi. No use of accessory muscles.\nStates: Musculoskeletal: Full range of motion in all extremities. No joint swelling, deformity, or tenderness.\nStates: Neck:  Supple, no cervical lymphadenopathy, thyromegaly, or carotid bruits.\nStates: Abdominal: Soft, non-tender, non-distended. No hepatosplenomegaly or masses. Bowel sounds present.\nStates: Extremities: No cyanosis, clubbing, or edema noted. Peripheral pulses are intact and symmetric.\nStates: Skin:  Warm, dry, intact. No rashes, lesions, or signs of infection.\nStates: Neurological: Alert and oriented to person, place, and time. Cranial nerves II–XII intact. Motor and sensory functions intact. Reflexes are symmetric.\nStates: Psychological: Appropriate mood and affect. Thought process coherent. No signs of acute distress or psychosis.\nGenitourinary: Deferred unless clinically indicated. External genitalia normal in appearance. No lesions or discharge.\n\nLabs/Diagnostics: (Labs (including biopsies), Diagnostics such as imaging, electrophysiological (EKG/ECG, EEG), endoscopic procedures that have already resulted.)\n\n---\n\n#### Assessment\n\n(Primary diagnosis, consistent with if tentative, specifics (e.g. instead of just palpitations use paroxysmal or persistent if designated.), chronic conditions discussed in depth during visit. THIS SECTION MUST BE ACCURATELY FILLED FOR BILLING OR INSURANCE WILL REJECT/INVESTIGATE. Using ICD style phrasing is important and can be googled easily. (Acute, Chronic, Paroxysmal, etc.))\n\n---\n\n#### Plan\n\nLabs/diagnostics/imaging being ordered: (Same as labs/diagnostics above only it encompasses what was ordered during THIS visit. This section includes referrals sent and medication refills. Emphasize if mentioned that the test is to rule out a condition or being ordered because of a suspected condition, this helps with insurance billing/prior authorizations. In a real chart this is where the orders are actually input and sent, not just listed, so accuracy is very important.\n\n[Include anything done e.g. immunizations/vaccines or strep/flu test during the appointment and their results or how patient will be informed if not resulting during appointment. If something is to be discussed for scheduling at another time then it would go under F/U info (e.g. repeat CT to be discussed at follow up appointment if symptoms persist.)]\n\nPatient education: (Counseling such as tobacco cessation, lifestyle advice, risk discussion, precautions, etc.)\n\nStates that patient was counseled on\nStates that patient was advised\nStates that it was recommended patient\n\nHealth maintenance/Follow up Appointments: (Timeframe for pt to follow up and who they are to follow up with. What they need to continue doing/who they need to continue seeing. Mention tests/orders to be done before/during next appointment and why.)\n\nStates that patient is to follow up with (who) in (when) for (why)""\n', 'detect_refusals': False, 'maximum_threads': 5, 'eval_concurrency': 10, 'model_under_test': 'anthropic/claude-sonnet-4-5-20250929', 'max_output_tokens': 30000, 'heavyweight_factor': 1, 'create_text_summary': False, 'run_confidence_evaluation': True, 'retry_failed_calls_indefinitely': False}",91.11,180,2.12,0.0,3,1.2,5.0
+
+Test Result Id,Test Id,Test Status,Test Input,LLM Output,Files,In Tokens,Out Tokens,Duration,Operator,Criteria,Auto Eval,Confidence Level,Feedback,Category
+9fca57d9-83ab-4834-954f-dce3e8016cda,13199eb5-bea0-455a-86e8-d8e6b32aad08,Success,"Use the SOAP note template to write SOAP notes for the attached transcript. Write N/A in the section if no information is given.
+
+Subjective
+Header:
+Chief Complaint(s):
+HPI:
+Allergies/Intolerance:
+Medications:
+Surgical history/hospitalizations:
+Past Medical History:
+Family History:
+Social History:
+Review of System:
+
+Objective
+General Survey:
+Vitals:
+Physical Exam:
+Labs/Diagnostics:
+
+Assessment
+
+Plan
+Labs/diagnostics/imaging being ordered:
+Patient education:
+Health maintenance/Follow up Appointments:","# SOAP NOTE
+
+## Subjective
+
+**Header:**
+States that provider is Dr. Reeves from the Family Medicine clinic.
+States that patient is Ms. Bergemann, 37 year old female.
+States that visit is conducted via video with patient at home and provider at clinic.
+States that patient is alone, unaccompanied.
+
+**Chief Complaint(s):**
+States that patient is present for sleep issues.
+
+**HPI:**
+States that patient is a 37 year old female.
+States that patient is alone at home during visit.
+States that patient has been having trouble with sleep for approximately 20 years.
+States that sleep issues have been getting worse recently.
+States that patient has difficulty both falling asleep and staying asleep.
+States that patient experiences racing thoughts at bedtime, sometimes related to anxiety but not always.
+States that patient has a regular bedtime routine including going to bed at 10 PM, keeping room cool, and no TV in bedroom.
+States that patient takes melatonin 3 mg approximately one hour before bed (around 9 PM).
+States that melatonin helped initially but patient is unsure if it is currently effective after taking it for approximately 1-2 years.
+States that patient wakes up every night to use the bathroom and has been experiencing nocturia for decades.
+States that after nighttime awakening, patient is often unable to fall back asleep, sometimes remaining awake for 1-3 hours.
+States that patient sometimes gives up and gets up for the day at 4-5 AM.
+States that patient uses ZzzQuil sparingly, approximately 1-2 times per month at half dose when desperate.
+States that patient took trazodone approximately 5 years ago prescribed by previous doctor but stopped taking it and cannot recall reason or effectiveness.
+States that patient underwent surgical menopause approximately 20 years ago with bilateral oophorectomy.
+States that patient experienced hot flashes for 6-8 months post-surgery but has not had vasomotor symptoms in years.
+States that patient inquired about progesterone therapy after two friends reported benefit for their sleep issues.
+States that sleep issues are affecting patient's work, mood, and overall quality of life.
+States that patient describes a vicious cycle where inability to sleep causes anxiety about not sleeping which further impairs sleep.
+States that patient attempts to maintain sleep hygiene by not using phone or TV when awake at night.
+States that when unable to sleep, patient sometimes stays in bed hoping to fall asleep, or after 1-2 hours gets up to living room to read or sit quietly.
+
+**Allergies/Intolerance:**
+N/A
+
+**Medications:**
+States that patient currently takes melatonin 3 mg by mouth at bedtime (approximately 9 PM) for sleep.
+States that patient currently takes melatonin supplement that contains L-theanine for relaxation.
+States that patient currently takes magnesium glycinate 200 mg by mouth daily for muscle relaxation/sleep.
+States that patient currently takes Centrum Silver 50+ for women (multivitamin with calcium and vitamin D) by mouth daily for general health and bone health.
+States that patient uses ZzzQuil as needed, approximately 1-2 times per month at half the recommended dose for sleep.
+States that trazodone for sleep was discontinued approximately 5 years ago.
+
+**Surgical history/hospitalizations:**
+States that patient underwent bilateral oophorectomy with the second ovary removed approximately 20 years ago resulting in surgical menopause.
+States that patient underwent right hip replacement in August 2019.
+States that patient underwent excision of basal cell carcinoma in April 2022.
+
+**Past Medical History:**
+States that patient has a history of chronic insomnia for approximately 20 years.
+States that patient has a history of anxiety.
+States that patient has a history of hypertension diagnosed in October 2017.
+States that patient has a history of hyperlipidemia diagnosed in August 2019.
+States that patient has a history of arthritis affecting multiple joints, particularly bilateral knees.
+States that patient has a history of osteopenia diagnosed in March 2022.
+States that patient has a history of diverticulosis.
+States that patient has a history of basal cell carcinoma excised in April 2022.
+States that patient has a history of abnormal heart sounds noted in April 2021 which were evaluated and determined to be not serious.
+States that patient has a history of nocturia for decades.
+
+**Family History:**
+N/A
+
+**Social History:**
+States that patient denies tobacco use/history.
+States that patient denies alcohol use.
+States that patient consumes approximately one cup of coffee in the morning and avoids caffeine after noon.
+
+**Review of System:**
+States: Constitutional: Affirms fatigue and sleep disturbance. Denies fever or chills.
+States: Integumentary: Denies current rashes, pruritus, or lesions.
+States: Head, Eyes, Ears, Nose, Throat (HEENT): Denies headache, visual disturbances, hearing loss, nasal congestion, epistaxis, or sore throat.
+States: Neck: Denies pain, stiffness, swelling, or palpable masses.
+States: Respiratory: Denies cough, dyspnea, wheezing, or hemoptysis. Affirms breathing is fine with no problems.
+States: Cardiovascular: Denies chest pain, palpitations, orthopnea, or peripheral edema.
+States: Gastrointestinal: Denies nausea, vomiting, diarrhea, constipation, abdominal pain, melena, or hematochezia.
+States: Genitourinary: Affirms nocturia occurring nightly for decades. Denies dysuria, hematuria, frequency during daytime, urgency, or incontinence.
+States: Musculoskeletal: Affirms arthritis pain in bilateral knees and other joints. Denies acute joint swelling or muscle weakness.
+States: Neurological: Denies dizziness, syncope, numbness, tingling, or focal weakness.
+States: Psychiatric: Affirms anxiety and frustration related to sleep issues. Affirms racing thoughts at bedtime. Denies depression. Describes mood as ""tired but otherwise okay, not depressed, just frustrated.""
+States: Endocrine: Denies heat/cold intolerance, polyuria, or polydipsia. History of surgical menopause without current vasomotor symptoms.
+States: Hematologic/Lymphatic: Denies easy bruising, bleeding tendencies, or lymphadenopathy.
+States: Allergic/Immunologic: Denies seasonal allergies, food sensitivities, or recurrent infections.
+
+---
+
+## Objective
+
+**General Survey:**
+States that patient is alert and oriented to person, place, and time.
+States that patient appears in no acute distress.
+States that patient does not appear ill or toxic-looking.
+
+**Vitals:**
+N/A
+
+**Physical Exam:**
+States: General: Alert, awake, and fully oriented. No signs of acute distress. General appearance is normal. Behavior is appropriate.
+States: Respiratory: Breathing effort appears normal. No signs of respiratory distress observed.
+States: Neurological: Mental status at baseline, fully alert and oriented to person (Ms. Bergemann), place (home in Bearden, Florida), and time (Wednesday, September 25th, 2024). No focal neurological deficits noted. Judgment appears intact.
+States: Psychological: Mood and affect appear normal. Thought content is organized and coherent. No signs of depression or psychosis. Patient expresses appropriate frustration regarding sleep issues.
+
+**Labs/Diagnostics:**
+N/A
+
+---
+
+## Assessment
+
+Chronic insomnia, approximately 20 years duration with recent worsening, characterized by sleep onset and sleep maintenance difficulties.
+Nocturia, decades duration, contributing to sleep fragmentation.
+Anxiety, contributing to insomnia with racing thoughts and anxiety about sleep.
+Hypertension.
+Hyperlipidemia.
+Osteoarthritis, multiple joints including bilateral knees, status post right hip replacement August 2019.
+Osteopenia, diagnosed March 2022.
+Diverticulosis.
+History of surgical menopause secondary to bilateral oophorectomy approximately 20 years ago, currently without vasomotor symptoms.
+History of basal cell carcinoma, excised April 2022.
+
+---
+
+## Plan
+
+**Labs/diagnostics/imaging being ordered:**
+States that patient has polysomnography (sleep study) scheduled for Monday, September 30, 2024 at Lebonheur East Surgery Center to evaluate for sleep apnea and other sleep disorders.
+States that provider will follow up today with sleep medicine clinic to check on status of CBT-I (Cognitive Behavioral Therapy for Insomnia) referral.
+States that provider will coordinate care with patient's primary care provider regarding comprehensive management of chronic insomnia, anxiety, hypertension, hyperlipidemia, and nocturia evaluation.
+
+**Patient education:**
+States that patient was counseled that hormone therapy (progesterone) would not be beneficial for sleep issues given that surgical menopause occurred 20 years ago and patient has no current vasomotor symptoms.
+States that patient was advised that not all patients with sleep apnea snore and that polysomnography will comprehensively evaluate breathing patterns, oxygen levels, and sleep stages.
+States that patient was educated about CBT-I (Cognitive Behavioral Therapy for Insomnia) as a specific therapy that addresses thought patterns and behaviors interfering with sleep.
+States that patient was counseled that CBT-I can be effective for the type of insomnia with racing thoughts and sleep anxiety that patient is experiencing.
+States that patient was advised to continue current sleep hygiene routine including consistent 10 PM bedtime, cool room temperature, and no TV in bedroom.
+States that patient was advised to continue melatonin 3 mg at current dose and timing.
+States that patient was counseled that blue light from screens can interfere with natural sleep signals and to continue avoiding phone and TV use during nighttime awakenings.
+States that patient was advised regarding deep breathing exercises for racing thoughts: breathe in slowly for 4 counts, hold for 4 counts, exhale for 6 counts.
+States that patient was counseled that sleep problems are real medical issues, not personal failures.
+States that patient was advised that white noise or nature sounds may be helpful to mask disruptive noises.
+States that patient was counseled that physical health, mental health, and sleep are interconnected.
+States that patient was advised that nocturia may have underlying treatable causes and to discuss with primary care provider.
+States that patient was counseled to continue magnesium glycinate as it is not causing problems and may provide benefit for muscle relaxation.
+States that patient was advised that after sleep study results, better as-needed medication options for difficult nights can be discussed.
+States that patient was advised that different sleep medications work better for different types of sleep problems and medication decisions will be guided by sleep study findings.
+
+**Health maintenance/Follow up Appointments:**
+States that patient is to attend polysomnography appointment on Monday, September 30, 2024 at Lebonheur East Surgery Center.
+States that sleep study results are expected within 1-2 weeks.
+States that patient is to follow up with sleep specialist after sleep study to review findings and discuss treatment options.
+States that patient is to continue follow up with primary care provider for coordination of care regarding hypertension, hyperlipidemia, nocturia evaluation, and overall health management.
+States that patient is to await contact regarding CBT-I referral scheduling after provider follows up with sleep medicine clinic.
+States that patient was advised to contact clinic if symptoms worsen before Monday's sleep study or if any concerns arise.
+States that provider will make note to correct patient age error in electronic medical record system.",51.txt,0,0,0.0,custom_satisfies_statement,"In Header, States patient’s last name as Bergemann",Pass,High,"The SOAP note's Header explicitly states 'patient is Ms. Bergemann, 37 year old female,' so the patient's last name Bergemann is present in the Header.",Header
+,,,,,,,,,custom_satisfies_statement,"In Header, States that provider is Dr. Reeves with the Family Medicine Clinic.",Pass,High,"The SOAP note's Header explicitly states 'provider is Dr. Reeves from the Family Medicine clinic,' which directly matches the check request that the Header state the provider is Dr. Reeves with the Family Medicine Clinic. The detail is present and correctly placed in the Header.",Header
+,,,,,,,,,custom_satisfies_statement,"In Header, States patient is in Bearden, FL",Pass,High,"The check asks whether the Header states the patient is in Bearden, FL. The Header section does not include that location; however, the note does state in the Objective/Neurological section that the patient is oriented to place as 'home in Bearden, Florida'. This is a non-critical recommendation, and per instructions a non-critical detail that is present but placed in the wrong section is considered a pass.",Header
+,,,,,,,,,custom_satisfies_statement,"In Header, States date as September 25, 2024",Pass,High,"The check asks whether the Header states the date as September 25, 2024. The note does not include the date in the Header, but the date is present elsewhere: Objective -> Neurological notes orientation to time as ""Wednesday, September 25th, 2024."" This is a non-critical detail and is present in the note though miscategorized; per the instructions, a non-critical detail present but placed in the wrong section is considered a pass.",Header
+,,,,,,,,,custom_satisfies_statement,"In Header, States that visit today is being conducted via video telehealth",Pass,High,"The Header section of the SOAP note explicitly states: 'visit is conducted via video with patient at home and provider at clinic,' which indicates the visit was performed via video telehealth. This matches the checked criterion.",Header
+,,,,,,,,,custom_satisfies_statement,"In Chief Complaint(s), States patient is presenting over telehealth for worsening insomnia",Pass,Low,"The check asked for the Chief Complaint(s) to state the patient is presenting over telehealth for worsening insomnia. The Chief Complaint section only says the patient is 'present for sleep issues' and does not explicitly mention telehealth or 'worsening' there. However, the Header documents the visit was conducted via video (telehealth) and the HPI notes that the sleep issues have been getting worse. Because this is a non-critical recommendation and the information is present elsewhere in the note (though not in the Chief Complaint field), this is counted as correct.",Chief Complaint(s)
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient is a 37 year old female",Pass,High,The HPI section of the SOAP note explicitly includes the line 'States that patient is a 37 year old female.' Therefore the requested detail is present in HPI.,HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient presents at home and alone for today’s video conference",Pass,High,"The HPI explicitly states 'States that patient is alone at home during visit,' which matches the check that the patient presents at home and alone for today's video conference, so the detail is present in HPI.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient has been having trouble sleeping for 20 years but it has been worsening recently",Pass,High,"The HPI explicitly states both elements: it notes the patient has had trouble sleeping for approximately 20 years and also states the sleep issues have been getting worse recently. This matches the check and is correctly placed in the HPI section (the detail is non-critical), so the output is correct.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient reports her mind will race at night and even when she does manage to fall asleep she will frequently wake up and struggle to go back to sleep",Pass,High,"The HPI explicitly notes the patient 'experiences racing thoughts at bedtime' and that she has difficulty both falling asleep and staying asleep. It also documents that after nighttime awakenings she is often unable to fall back asleep, sometimes remaining awake 1-3 hours (and sometimes getting up at 4-5 AM). These statements match the checked detail.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient does have a consistent bedtime routine where she keeps her room cool, no television in the bedroom, takes Melatonin 3 mg 1 hour before bed for the last year or two, and goes to sleep every night at 10 pm.",Pass,High,"The HPI explicitly includes all checked details: it notes a regular bedtime routine with a 10 PM bedtime, keeping the room cool, and no TV in the bedroom. It also documents melatonin 3 mg taken about one hour before bed (around 9 PM) for approximately 1–2 years. Therefore the check is satisfied.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient reports Melatonin helped with sleep in the beginning, but now she cannot tell how effective it is now",Pass,High,"The HPI explicitly states: 'States that melatonin helped initially but patient is unsure if it is currently effective after taking it for approximately 1-2 years.' This matches the check (melatonin helped in the beginning but now she cannot tell how effective it is), and it is correctly placed in the HPI.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient wakes up during the night to use the bathroom every night and has been doing so for decades, she is typically awake anywhere from 1 to 3 hours afterwards",Pass,High,"The HPI explicitly notes that the patient 'wakes up every night to use the bathroom and has been experiencing nocturia for decades' and that after nighttime awakening she is often unable to fall back asleep, 'sometimes remaining awake for 1-3 hours.' These statements directly match the check.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States when patient cannot fall asleep they usually stay awake in the middle of the night for 2-3 hours or will get up around 4-5 AM",Pass,High,"This check is a recommendation (not critical). The HPI includes: 'after nighttime awakening, patient is often unable to fall back asleep, sometimes remaining awake for 1-3 hours' and 'patient sometimes gives up and gets up for the day at 4-5 AM.' The 1-3 hour statement encompasses the 2-3 hour range and the 4-5 AM waking is explicitly documented, so the detail is present in HPI.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient reports that the magnesium supplement she takes daily has had no noticeable effect on her insomnia.",Fail,High,"The HPI does not state that the patient reports the daily magnesium supplement has had no noticeable effect on her insomnia. Magnesium is documented in the Medications section (magnesium glycinate 200 mg daily) and the Plan advises to continue magnesium, but there is no HPI line saying the supplement had no noticeable effect. Therefore the check is incorrect.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient is not currently taking any blood pressure medications although she has a history of hypertension.",Pass,Low,"The HPI does not explicitly state that the patient is not taking blood pressure medications. However, the note documents hypertension in Past Medical History and the current Medications list contains no antihypertensive agents, which reasonably indicates she is not on BP medications. This detail is not 'critical' and the check-specified category (HPI) is a recommendation, so presence of the information elsewhere in the note counts as meeting the criterion.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient was prescribed trazodone and also tried ZzzQuil in the past for insomnia with no improvement that she can remember.",Fail,High,"The HPI does mention both medications: it notes the patient took trazodone about 5 years ago (prescribed by a prior doctor) and that she uses ZzzQuil sparingly (~1–2×/month at half dose). However, the HPI does not explicitly state 'no improvement that she can remember' for these treatments. For trazodone the note says she 'cannot recall reason or effectiveness' (ambiguous), and for ZzzQuil there is no statement about lack of efficacy. Because the specific claim that she tried both 'with no improvement that she can remember' is not fully present in the HPI, the criterion is not met.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient went through surgical menopause 20 years ago after having ovaries removed",Pass,High,"The HPI explicitly states the patient underwent surgical menopause approximately 20 years ago with bilateral oophorectomy, so the criterion is met. This detail is not 'critical' under the provided definition and is appropriately placed in the HPI (it also appears in the surgical history section).",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient had hot flashes for 6-8 months following ovary removal surgery",Pass,High,The HPI explicitly states: 'States that patient experienced hot flashes for 6-8 months post-surgery but has not had vasomotor symptoms in years.' This matches the checked detail (hot flashes for 6-8 months following ovary removal) and is correctly placed in the HPI.,HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient’s friends are taking progesterone and she wants to know if it would help her sleep",Pass,High,"The HPI includes the sentence: 'States that patient inquired about progesterone therapy after two friends reported benefit for their sleep issues,' which directly matches the checked detail about friends taking progesterone and the patient asking if it would help her sleep.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient has sleep study scheduled for Monday at Lebonheur East Surgery Center",Pass,Low,"The HPI does not state the sleep study appointment. However, the Plan and Follow-up sections explicitly document a polysomnography scheduled for Monday, September 30, 2024 at Lebonheur East Surgery Center. Scheduling information is not a critical detail per the instructions, so placing it outside HPI is acceptable. Therefore this meets the criterion.",HPI
+,,,,,,,,,custom_satisfies_statement,"In Allergies/Intolerance, N/A",Pass,High,"The SOAP note's Allergies/Intolerance section explicitly states 'N/A', which matches the check. No allergies are mentioned elsewhere in the note (the ROS also denies allergies), so the detail is correctly documented in the Allergies/Intolerance section. Therefore the check passes.",Allergies/Intolerance
+,,,,,,,,,custom_satisfies_statement,"In Medications, States patient is taking OTC Melatonin with L-Theanine 3 mg 1 hour before bed nightly",Pass,High,"The Medications section documents melatonin 3 mg at bedtime and notes the melatonin supplement contains L-theanine. The HPI explicitly states the patient takes melatonin approximately one hour before bed (around 9 PM), and the Plan advises continuing melatonin 3 mg at current dose/timing. This non-critical detail (OTC melatonin with L-theanine 3 mg taken ~1 hour before bed nightly) is therefore present in the note (within Medications and corroborated in HPI/Plan), so the check is satisfied.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Medications, States that patient is currently taking OTC Centrum Silver 50+ for Women multivitamin daily.",Pass,High,The Medications section explicitly lists 'Centrum Silver 50+ for women (multivitamin with calcium and vitamin D) by mouth daily for general health and bone health.' This matches the checked detail (OTC Centrum Silver 50+ for Women multivitamin daily) and is correctly placed under Medications.,Medications
+,,,,,,,,,custom_satisfies_statement,"In Medications, States patient uses ZzzQuil half a dose prn for sleep",Pass,High,"The Medications section explicitly states the patient ""uses ZzzQuil as needed, approximately 1-2 times per month at half the recommended dose for sleep,"" which matches the check requirement that Medications state the patient uses ZzzQuil at half a dose PRN for sleep. This detail is present and correctly placed (non-critical).",Medications
+,,,,,,,,,custom_satisfies_statement,"In Medications, States that patient is currently taking magnesium glycinate 200 mg once daily.",Pass,High,"The Medications section explicitly states the patient 'currently takes magnesium glycinate 200 mg by mouth daily,' which matches the criterion of magnesium glycinate 200 mg once daily being listed under Medications.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Medications, States that patient was prescribed trazodone approximately 5 years ago for insomnia and cannot remember why she discontinued it.",Pass,High,"The check asks whether the Medications section states the patient was prescribed trazodone ~5 years ago for insomnia and cannot remember why she discontinued it. The SOAP note's HPI explicitly states: 'patient took trazodone approximately 5 years ago prescribed by previous doctor but stopped taking it and cannot recall reason or effectiveness.' The Medications section notes 'trazodone for sleep was discontinued approximately 5 years ago' (it records discontinuation and the indication but omits the explicit 'cannot remember why' phrase). Because this detail is present in the note (HPI) and the item is not classified as critical, misplacement between sections is acceptable per the instructions. Therefore the criterion is met.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Surgical history/hospitalizations, States that patient underwent an oophorectomy approximately 20 years ago",Pass,High,The SOAP note's 'Surgical history/hospitalizations' section explicitly states: 'States that patient underwent bilateral oophorectomy with the second ovary removed approximately 20 years ago resulting in surgical menopause.' This directly matches the check (oophorectomy approximately 20 years ago) and is correctly placed in the surgical history section.,Surgical history/hospitalizations
+,,,,,,,,,custom_satisfies_statement,"In Surgical history/hospitalizations, States that patient underwent a right hip replacement in August of 2019.",Pass,High,"The Surgical history/hospitalizations section of the SOAP note explicitly states that the patient 'underwent right hip replacement in August 2019,' so the specified detail is present under the requested category.",Surgical history/hospitalizations
+,,,,,,,,,custom_satisfies_statement,"In Surgical history/hospitalizations, States that patient underwent removal of basal cell carcinoma in April of 2022.",Pass,High,"The Surgical history/hospitalizations section explicitly states: 'States that patient underwent excision of basal cell carcinoma in April 2022.' This matches the checked detail and the item is correctly placed in the Surgical history/hospitalizations section. The detail is non-critical, so correct placement constitutes a pass.",Surgical history/hospitalizations
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States patient has anxiety",Pass,High,"The Past Medical History section explicitly states 'States that patient has a history of anxiety.' Anxiety is not marked as a critical detail, so its presence in Past Medical History satisfies the check.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States that patient was diagnosed with hypertension in October of 2017.",Pass,High,The Past Medical History section explicitly states: 'States that patient has a history of hypertension diagnosed in October 2017.' This matches the check exactly and is correctly placed in Past Medical History.,Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States that patient has a history of arthritis with her knees being the worst.",Pass,High,"The Past Medical History explicitly states: 'history of arthritis affecting multiple joints, particularly bilateral knees,' which directly matches the check that the patient has a history of arthritis with her knees being the worst. This non-critical detail is correctly documented under Past Medical History.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States patient has osteopenia, diagnosed in March 2022",Pass,High,"The Past Medical History section explicitly includes 'osteopenia diagnosed in March 2022,' which matches the requested detail. This is a non-critical item and is correctly categorized in Past Medical History.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States patient has diverticulosis",Pass,High,"The Past Medical History section explicitly states 'States that patient has a history of diverticulosis.' This matches the check requesting that diverticulosis be listed in Past Medical History. The detail is non-critical and is correctly categorized, so the check passes.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States that patient was diagnosed with hyperlipidemia in August of 2019.",Pass,High,The Past Medical History section of the SOAP note explicitly states: 'States that patient has a history of hyperlipidemia diagnosed in August 2019.' This exactly matches the check and is correctly placed under Past Medical History.,Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States that patient was evaluated by cardiology in April of 2021after an arrhythmia was heard during an exam but it turned out to be nothing concerning.",Pass,High,"The Past Medical History contains: 'history of abnormal heart sounds noted in April 2021 which were evaluated and determined to be not serious.' This conveys that an abnormal cardiac finding in April 2021 was evaluated and found to be non‑concerning, which matches the check's content. The note does not explicitly state 'cardiology' or the word 'arrhythmia,' but the clinical meaning is present; since this is not a critical detail, the PMH entry satisfies the check.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Family History, N/A",Pass,High,"The check requests that the Family History section contain 'N/A'. The provided SOAP note lists 'Family History: N/A'. This detail is not classified as critical, so it is a recommendation; because the note includes 'N/A' in the Family History section, the check passes.",Family History
+,,,,,,,,,custom_satisfies_statement,"In Social History, States patient drinks a cup of coffee in the morning, but tries not to have any after noon",Pass,High,"The Social History section explicitly states the patient 'consumes approximately one cup of coffee in the morning and avoids caffeine after noon.' This matches the checked detail and is correctly placed under Social History. The detail is non-critical, so presence and correct categorization constitute a correct result.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, States patient denies alcohol use",Pass,High,"The Social History section explicitly states: 'States that patient denies alcohol use.' Because alcohol/substance use is a critical detail that must be correctly categorized, and it appears in Social History as required, the check is correct.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, States patient is a nonsmoker, and has never smoked cigarettes or used tobacco",Pass,High,"The Social History section explicitly states 'States that patient denies tobacco use/history,' which matches 'nonsmoker, and has never smoked cigarettes or used tobacco.' Substance use history is a critical detail and it is correctly documented under Social History, so the check is correct.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Review of System, States: General/Constitutional: Admits fatigue and difficulty sleeping. Denies vasomotor symptoms.",Pass,High,"The ROS General/Constitutional explicitly states 'Affirms fatigue and sleep disturbance,' which corresponds to 'Admits fatigue and difficulty sleeping.' The note does not list 'Denies vasomotor symptoms' under General/Constitutional, but the Endocrine ROS states 'History of surgical menopause without current vasomotor symptoms,' effectively denying vasomotor symptoms elsewhere in the ROS. Per the instructions, the specified category is a recommendation (not critical), so the detail being present but placed in the Endocrine section is acceptable. Therefore this meets the criterion.",Review of System
+,,,,,,,,,custom_satisfies_statement,"In Review of System, States: Genitourinary: Admits nocturia.",Pass,High,"The Review of Systems section explicitly states under Genitourinary: 'Affirms nocturia occurring nightly for decades.' The check asked whether the ROS admits nocturia; this is present and correctly placed. Nocturia is not a listed critical detail here, so meeting the recommendation is sufficient.",Review of System
+,,,,,,,,,custom_satisfies_statement,"In Review of System, States: Psychological: Admits anxiety.",Pass,High,"The Review of System section includes: 'Psychiatric: Affirms anxiety and frustration related to sleep issues. Affirms racing thoughts at bedtime.' This directly matches the checked detail ('Psychological: Admits anxiety'), so the check is correct.",Review of System
+,,,,,,,,,custom_satisfies_statement,"In General Survey, States that patient is alert and oriented x3. Well-nourished, no signs of acute distress.",Fail,High,"The General Survey in the SOAP note documents that the patient is alert and oriented to person/place/time and that there are no signs of acute distress. However, it does not state that the patient is well-nourished. Because the checked detail requires all three elements (alert and oriented x3, well-nourished, no signs of acute distress) and 'well-nourished' is missing, the criterion is not fully met.",General Survey
+,,,,,,,,,custom_satisfies_statement,"In Vitals, N/A",Pass,High,"The check required that the Vitals section be 'N/A'. In the provided SOAP note, under Objective → Vitals it explicitly states 'N/A'. This matches the check, and Vitals was not flagged as a critical detail, so this is correct.",Vitals
+,,,,,,,,,custom_satisfies_statement,"In Physical Exam, Done virtually.",Pass,High,"The note documents that the visit was conducted via video with the patient at home in the Header/Subjective (""visit is conducted via video with patient at home and provider at clinic""). The Physical Exam section does not explicitly label the exam as ""done virtually,"" though neurological findings reference the patient's home location. Per instructions this is a non-critical detail and a recommendation; because the virtual nature of the encounter is documented elsewhere in the note, this is acceptable (pass).",Physical Exam
+,,,,,,,,,custom_satisfies_statement,"In Physical Exam, States: Respiratory: Breathing effort appears normal, no signs of respiratory distress.",Pass,High,The Physical Exam section of the SOAP note contains: 'Respiratory: Breathing effort appears normal. No signs of respiratory distress observed.' This matches the checked detail exactly and is correctly placed under Physical Exam.,Physical Exam
+,,,,,,,,,custom_satisfies_statement,"In Physical Exam, States: Neurological: Mental status appears to be at baseline, fully alert and oriented. No focal deficits noted.",Pass,High,"The Physical Exam Neurological section states: 'Mental status at baseline, fully alert and oriented to person (Ms. Bergemann), place (home in Bearden, Florida), and time (Wednesday, September 25th, 2024). No focal neurological deficits noted.' This matches the checked detail (mental status at baseline, fully alert and oriented; no focal deficits). The detail is non-critical, so this is a correct placement.",Physical Exam
+,,,,,,,,,custom_satisfies_statement,"In Physical Exam, States: Psychological: Mood and affect appear normal. Behavior is appropriate, judgement intact, thought content seems organized.",Pass,High,"The Physical Exam includes a Psychological section stating 'Mood and affect appear normal' and 'Thought content is organized and coherent.' 'Behavior is appropriate' is documented under General, and 'Judgment appears intact' is documented under Neurological. All elements from the check are present within the Physical Exam.",Physical Exam
+,,,,,,,,,custom_satisfies_statement,"In Physical Exam, States: Musculoskeletal: Baseline arthritis symptoms.",Pass,High,"The Physical Exam section does not explicitly include a Musculoskeletal entry stating baseline arthritis symptoms. However, baseline arthritis is documented elsewhere in the note: the Review of Systems states 'Affirms arthritis pain in bilateral knees and other joints' and Past Medical History lists arthritis. This detail is not critical (unlike allergies or substance use). Per the instructions, a non-critical detail that is present but placed in another section should be considered a pass.",Physical Exam
+,,,,,,,,,custom_satisfies_statement,"In Labs/Diagnostics, N/A",Pass,High,"The SOAP note's Objective section explicitly lists 'Labs/Diagnostics: N/A', which matches the check. Although the Plan later documents a polysomnography being scheduled, that is appropriately listed under the Plan and does not contradict the Objective Labs/Diagnostics entry. Therefore the note meets the criterion.",Labs/Diagnostics
+,,,,,,,,,custom_satisfies_statement,"In Assessment, Insomnia",Pass,High,"The Assessment section explicitly lists 'Chronic insomnia, approximately 20 years duration with recent worsening, characterized by sleep onset and sleep maintenance difficulties.' Therefore the detail 'Insomnia' is present in the Assessment and correctly categorized. Insomnia is non-critical in this context, so this meets the recommendation.",Assessment
+,,,,,,,,,custom_satisfies_statement,"In Labs/diagnostics/imaging being ordered, States that patient was advised to continue magnesium glycinate for muscle relaxation.",Pass,High,"The Labs/Diagnostics/Imaging section lists the polysomnography and related follow-up but does not contain a statement advising continuation of magnesium glycinate. The note does include counseling to continue magnesium glycinate, but that appears under Patient education. Per the instructions, this detail is not 'critical,' and a noncritical detail present but placed in the wrong section is still a pass.",Labs/diagnostics/imaging being ordered
+,,,,,,,,,custom_satisfies_statement,"In Labs/diagnostics/imaging being ordered, States that patient was advised to continue melatonin at the same dosage and consistency of 3 mg once daily at bedtime.",Pass,High,"The note explicitly states in the Patient education section that the patient was advised to continue melatonin 3 mg at the current dose and timing. That statement does not appear under the 'Labs/diagnostics/imaging being ordered' section. However, this is not a critical detail, and the instructions specify that a non-critical detail present but incorrectly categorized is still a pass.",Labs/diagnostics/imaging being ordered
+,,,,,,,,,custom_satisfies_statement,"In Patient education, States that all questions and concerns were addressed.",Fail,High,"The Patient education section contains many counseling points (CBT-I, melatonin, sleep hygiene, breathing exercises, etc.) but does not include an explicit statement that 'all questions and concerns were addressed.' Since that exact detail is absent and it is a non-critical recommendation, the check fails.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Patient education, States that patient was encouraged to continue the current sleep hygiene routine of a cool bedroom and no television. Will discuss medication changes once results of sleep study have been reviewed.",Pass,High,"The Patient education section explicitly advises the patient to continue their current sleep hygiene routine, including a consistent 10 PM bedtime, cool room temperature, and no TV in the bedroom. It also states that after the sleep study results are available, better as-needed medication options can be discussed and that medication decisions will be guided by the sleep study findings. Both elements from the check are present and this is a non-critical detail, so the check is CORRECT.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Patient education, States that patient was advised that blue light can interfere with the body’s natural sleep signals",Pass,High,"The check asks whether the Patient education section states that the patient was advised that blue light can interfere with the body’s natural sleep signals. In the SOAP note Patient education it explicitly says: 'patient was counseled that blue light from screens can interfere with natural sleep signals and to continue avoiding phone and TV use during nighttime awakenings.' This matches the requested detail (a non-critical recommendation), so the criterion is met.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Patient education, States that the patient was advised she could try a white noise machine or sleep application if would like.",Pass,High,"The Patient education section explicitly states that ""white noise or nature sounds may be helpful to mask disruptive noises,"" which corresponds to advising the patient they could try a white noise machine or sleep application if they would like. The detail is present.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Patient education, States that patient was recommended to try breathing exercises when her mind is racing at night. Breathe in slowly for 4 counts, hold for 4 counts, then exhale for 6 counts.",Pass,High,"The Patient education section of the SOAP note explicitly states: 'States that patient was advised regarding deep breathing exercises for racing thoughts: breathe in slowly for 4 counts, hold for 4 counts, exhale for 6 counts.' This matches the check exactly. The detail is not listed as critical, so its presence under Patient education as a recommendation is appropriate.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, States that patient was referred for Cognitive Behavioral Therapy for Insomnia, will follow up on referral.",Pass,High,"The Plan section explicitly documents the CBT-I referral and follow-up: under Labs/diagnostics it states the provider 'will follow up today with sleep medicine clinic to check on status of CBT-I (Cognitive Behavioral Therapy for Insomnia) referral,' and under Health maintenance/Follow up Appointments it states the patient 'is to await contact regarding CBT-I referral scheduling after provider follows up with sleep medicine clinic.' This matches the check and is correctly placed (non-critical detail).",Health maintenance/Follow up Appointments
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, States that patient is to continue with sleep study on Monday, with results coming 1-2 weeks later",Pass,High,"The 'Health maintenance/Follow up Appointments' section explicitly states the patient is to attend a polysomnography (sleep study) on Monday, September 30, 2024, and that sleep study results are expected within 1-2 weeks. Therefore the specified detail is present.",Health maintenance/Follow up Appointments
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, States that patient was encouraged to follow up with a primary care physician for further treatment of hypertension and nocturia. Will copy report to primary care once established.",Pass,High,"The SOAP note's Health maintenance/Follow up Appointments section explicitly states the patient is to continue follow up with their primary care provider for coordination of care regarding hypertension and nocturia evaluation. The Plan also notes the provider will coordinate with the patient's primary care provider, which conveys intent to communicate the visit findings. Although the exact phrase 'will copy report to primary care once established' is not verbatim, the documented instruction to follow up with PCP and to coordinate care satisfies the non-critical recommendation.",Health maintenance/Follow up Appointments
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, States that patient was advised that if her symptoms worsen before her sleep study appointment or if she has any further questions/concerns to call. Follow up in one to two weeks once sleep study has resulted.",Pass,High,"The Plan > Health maintenance/Follow up Appointments explicitly states the patient was advised to contact the clinic if symptoms worsen before Monday's sleep study or if any concerns arise, and notes that sleep study results are expected within 1-2 weeks with follow-up to review findings. These statements match the check, so the criterion is met.",Health maintenance/Follow up Appointments
+9fb90381-cbc0-4f35-a8a2-f8225f279e87,cf34e169-d572-44cf-ac24-52bd253d3286,Success,"Use the SOAP note template to write SOAP notes for the attached transcript. Write N/A in the section if no information is given.
+
+Subjective
+Header:
+Chief Complaint(s):
+HPI:
+Allergies/Intolerance:
+Medications:
+Surgical history/hospitalizations:
+Past Medical History:
+Family History:
+Social History:
+Review of System:
+
+Objective
+General Survey:
+Vitals:
+Physical Exam:
+Labs/Diagnostics:
+
+Assessment
+
+Plan
+Labs/diagnostics/imaging being ordered:
+Patient education:
+Health maintenance/Follow up Appointments:","# SOAP NOTE
+
+## Subjective
+
+**Header:**
+States that provider is Dr. Flores
+States that patient is Mary Smith Gonzales, 54-year-old female
+
+**Chief Complaint(s):**
+States that patient is present for a well visit/checkup
+
+**HPI:**
+States that patient is a 54-year-old female.
+States that this is patient's first visit with Dr. Flores as her new primary care physician.
+States that patient has no particular complaints at this time and is here for routine checkup.
+
+**Allergies/Intolerance:**
+States that patient has common allergies (environmental allergies)
+States that patient denies food intolerances
+
+**Medications:**
+States that patient currently takes pazopanib (dosage and frequency not specified) for soft tissue sarcoma
+States that patient currently takes Cyproheptadine (dosage and frequency not specified) for recurrent colds
+States that patient currently takes Claritin (dosage and frequency not specified) for common allergies
+States that patient currently takes vitamin C daily (dosage not specified)
+States that patient currently takes multivitamins daily (dosage not specified)
+States that patient currently takes probiotics daily (dosage not specified)
+States that patient takes Orajel as needed for toothaches
+States that patient takes Advil as needed for aches and pains
+
+**Surgical history/hospitalizations:**
+States that patient had a heart attack in the past (timing not specified beyond ""in the past"")
+
+**Past Medical History:**
+States that patient has a history of myocardial infarction
+States that patient has a history of hypertension
+States that patient has a history of hyperlipidemia/high cholesterol
+States that patient has a history of soft tissue sarcoma (currently being managed by oncologist)
+
+**Family History:**
+N/A
+
+**Social History:**
+States that patient denies tobacco use
+States that patient admits alcohol use - drinks beer occasionally, approximately 3 drinks per week or less, denies binge drinking (more than 5 drinks in one night)
+States that patient admits marijuana use - smoked weed in university, continues to use occasionally, prescribed, as part of treatment
+States that patient is not currently sexually active but had one sexual partner in the last year
+States that patient works as a Conference Center Manager, working 50-55 hours per week
+States that patient lives with family
+States that patient has no children
+States that patient engages in daily high-intensity workouts
+States that patient enjoys world-building (computer-based fantasy world creation) and letterbox games in spare time
+
+**Review of System:**
+States: Constitutional: Denies fever, chills, fatigue, or unintentional weight changes.
+States: Integumentary: Denies rashes, pruritus, or lesions.
+States: Head, Eyes, Ears, Nose, Throat (HEENT): Reports common allergies; reports occasional toothaches; denies visual disturbances, hearing loss, or epistaxis.
+States: Neck: N/A
+States: Respiratory: Reports recurrent colds.
+States: Cardiovascular: Denies current chest pain, palpitations, orthopnea, or peripheral edema.
+States: Gastrointestinal: Denies nausea, vomiting, diarrhea, constipation, abdominal pain, melena, or hematochezia.
+States: Genitourinary: N/A
+States: Musculoskeletal: Reports occasional aches and pains; engages in daily high-intensity workouts without reported limitation.
+States: Neurological: Denies dizziness, syncope, numbness, tingling, or focal weakness.
+States: Psychiatric: Denies depression, anxiety, mood changes, or sleep disturbances.
+States: Endocrine: N/A
+States: Hematologic/Lymphatic: N/A
+States: Allergic/Immunologic: Reports seasonal/environmental allergies.
+
+---
+
+## Objective
+
+**General Survey:**
+States that patient is alert and in no acute distress
+
+**Vitals:**
+States that patient is 5 feet 2 inches, weight of 145 pounds
+States that patient has a BMI of 26.5
+(Blood pressure, pulse, respiratory rate, temperature, and O2 saturation not documented in transcript)
+
+**Physical Exam:**
+States: Physical examination to be performed (specifics not documented in transcript)
+
+**Labs/Diagnostics:**
+States that recent lab values including cholesterol levels are unknown
+States that last labs were performed within the last month (specific results not available)
+
+---
+
+## Assessment
+
+History of myocardial infarction
+Hypertension, currently managed with lifestyle modifications (diet and exercise)
+Hyperlipidemia, currently managed with lifestyle modifications (low sodium diet)
+Soft tissue sarcoma, currently under oncology management on pazopanib therapy
+Allergic rhinitis
+
+---
+
+## Plan
+
+**Labs/diagnostics/imaging being ordered:**
+States that new lipid panel/cholesterol labs will be ordered today given recent labs not immediately available from previous provider
+States that blood pressure will be rechecked during visit
+States that previous lab results and medical records will be requested from patient's prior local physician
+States that coordination of care with patient's oncologist regarding soft tissue sarcoma management
+
+**Patient education:**
+States that patient was counseled on continuing lifestyle interventions including low sodium diet and regular exercise for hypertension and hyperlipidemia management
+States that patient was advised to avoid tobacco use for cardiac health
+States that patient was counseled on incorporating strength training exercises in addition to high-intensity interval training to prevent osteoporosis and bone loss, particularly important as patient ages and estrogen levels decline
+States that patient was advised to take rest days every 3-4 days from high-intensity workouts
+States that patient was advised to ensure adequate protein intake and hydration with exercise regimen
+States that it was recommended that patient consider STD testing if/when she becomes sexually active with new partners
+
+**Health maintenance/Follow up Appointments:**
+States that patient is to follow up after labs result to review cholesterol levels and determine if medication management is needed for hyperlipidemia
+States that patient is to continue follow-up with oncologist for soft tissue sarcoma management
+States that blood pressure monitoring will continue to determine if antihypertensive medication is needed",10.txt,0,0,0.0,custom_satisfies_statement,"In Header, Patient’s name as Mary Smith Gonzales",Pass,High,"The SOAP note's Header (under Subjective -> Header) explicitly states 'States that patient is Mary Smith Gonzales, 54-year-old female,' so the patient's name appears in the Header as requested.",Header
+,,,,,,,,,custom_satisfies_statement,"In Header, Patient’s gender as female",Pass,High,"The SOAP note's Header explicitly states 'patient is Mary Smith Gonzales, 54-year-old female,' so the patient's gender (female) is present in the Header. Since this is a non-critical recommendation and the detail appears in the correct section, the criterion is met.",Header
+,,,,,,,,,custom_satisfies_statement,"In Header, Patient’s age as 54 years old",Pass,High,"The SOAP note's Header explicitly states 'patient is Mary Smith Gonzales, 54-year-old female' under Subjective > Header, so the patient's age (54) is present in the Header. Age is not classified as 'critical' here, so this satisfies the check.",Header
+,,,,,,,,,custom_satisfies_statement,"In Chief Complaint(s), Patient here to establish care with new primary care physician",Pass,High,"The Chief Complaint lists the visit as a well visit/checkup, and the HPI explicitly states this is the patient's first visit with Dr. Flores as her new primary care physician. Because this is a recommended (non‑critical) placement, the information is present even though it's in the HPI rather than verbatim in Chief Complaint — count as correct.",Chief Complaint(s)
+,,,,,,,,,custom_satisfies_statement,"In Chief Complaint(s), Patient has no specific complaints",Pass,High,"The check asks whether the Chief Complaint indicates the patient has no specific complaints. The SOAP note's Chief Complaint states the patient is present for a well visit/checkup, and the HPI explicitly notes the patient has no particular complaints and is here for a routine checkup. This non-critical detail is correctly documented under Chief Complaint(s).",Chief Complaint(s)
+,,,,,,,,,custom_satisfies_statement,"In HPI, Patient is currently seeing an oncologist for soft tissue sarcoma treatment",Fail,High,"The check asks whether the HPI states the patient is currently seeing an oncologist for soft tissue sarcoma. The HPI provided only notes the patient is a 54-year-old female here for a routine checkup and does not mention ongoing oncology care. The fact that the sarcoma and oncologist management are documented elsewhere (Past Medical History, Medications, Assessment, and Plan) does not satisfy the criterion that this detail appear in the HPI. Because this is a recommended (not labeled critical) placement, the absence in HPI means the note does not meet the criterion.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, Patient is managing hypertension with lifestyle modifications, including low-sodium diet and exercise",Pass,Low,"The HPI does not state that the patient is managing hypertension with lifestyle modifications. However, the note documents this in the Assessment (hypertension currently managed with lifestyle modifications) and in Patient Education (counseled to continue low-sodium diet and regular exercise). This is not a critical detail, so its presence elsewhere rather than in HPI is acceptable.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, Patient has not been on previous medications for high cholesterol",Fail,High,"The HPI section does not state that the patient has not been on previous medications for high cholesterol. Although the Medication list does not include any lipid-lowering agents and the Assessment/Plan note hyperlipidemia is being managed with lifestyle modifications and that labs will guide medication decisions, the explicit detail ""has not been on previous medications for high cholesterol"" is not present in the HPI. This is a non-critical recommendation, so its omission from HPI is incorrect.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, No current cancer-related symptoms, heart attack symptoms or other concerns",Pass,High,"The HPI states the patient ""has no particular complaints at this time and is here for routine checkup,"" which conveys absence of current concerns. Additionally, the ROS explicitly denies chest pain and palpitations (heart-attack–related symptoms). Because this is a non-critical recommendation and the HPI indicates no current complaints, the criterion is met.",HPI
+,,,,,,,,,custom_satisfies_statement,"In Allergies/Intolerance, Patient does not have any food intolerances",Pass,High,"The SOAP note's Allergies/Intolerance section explicitly states the patient has environmental allergies and 'denies food intolerances.' This matches the check that the patient does not have any food intolerances, so the criterion is met.",Allergies/Intolerance
+,,,,,,,,,custom_satisfies_statement,"In Allergies/Intolerance, Patient has seasonal allergies, managed with Claritin?",Pass,High,"The Allergies/Intolerance section documents 'common/environmental allergies' (seasonal allergies). Claritin is listed under Medications as being taken for common allergies. Because the allergy itself is correctly recorded in Allergies/Intolerance and the management is documented (albeit under Medications), and this is not a critical miscategorization, the check is satisfied.",Allergies/Intolerance
+,,,,,,,,,custom_satisfies_statement,"In Medications, Patient is taking Pazopanib for soft tissue sarcoma management",Pass,High,"The SOAP note's Medications section explicitly lists pazopanib (dosage/frequency not specified) for soft tissue sarcoma, and the Assessment also notes soft tissue sarcoma managed with pazopanib. This matches the check, so the detail is correctly present in Medications.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Medications, Patient is taking Claritin",Pass,High,"The SOAP note's Medications section explicitly lists 'Claritin (dosage and frequency not specified) for common allergies.' Claritin is present and correctly placed under Medications, and it is not a critical detail requiring reclassification.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Medications, Patient is taking Vitamin C",Pass,High,"The SOAP note's Medications section explicitly lists 'vitamin C daily'. The check asked whether the patient is taking Vitamin C and that detail is correctly included under Medications. This is non-critical, so its presence in the Medications section satisfies the criterion.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Medications, Patient is taking Multivitamin",Pass,High,"The SOAP note's Medications section explicitly states the patient 'currently takes multivitamins daily,' so the check that the patient is taking a multivitamin in Medications is satisfied.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Medications, Patient is taking Probiotics",Pass,High,"The SOAP note's Medications section explicitly lists 'probiotics daily (dosage not specified)', which matches the check. This detail is non-critical, so its presence under Medications satisfies the criterion.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Medications, Patient is taking Cyproheptadine for common cold symptoms",Pass,High,"The SOAP note's Medications section explicitly lists Cyproheptadine (dosage/frequency not specified) and states it is taken for recurrent colds/common cold symptoms. The check asked whether Cyproheptadine is recorded in Medications for common cold symptoms; this is present and correctly categorized. As this detail is not critical, it is a pass.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Medications, Patient is smoking Marijuana on occasion, as prescribed",Pass,High,"The check asks whether the patient's occasional, prescribed marijuana use is listed in Medications. Substance-use history is a critical detail and should be documented in Social History (or clearly in both places if used as an active prescribed medication). In the provided SOAP note the marijuana use is documented in Social History (“admits marijuana use...continues to use occasionally, prescribed”) and is not listed under Medications. Because the critical detail is present and correctly categorized in Social History, the LLM output is correct.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Medications, Patient is taking Orajel for toothaches",Pass,High,"The Medications section of the SOAP note explicitly states 'patient takes Orajel as needed for toothaches.' Orajel is not one of the 'critical' details (the prompt lists allergies and substance use as examples of critical items), so its presence in Medications is appropriate. Therefore the check is correct.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Medications, Patient is taking Advil as needed for pain",Pass,High,"The SOAP note's Medications section explicitly lists 'Advil as needed for aches and pains.' The check asks whether the patient is taking Advil PRN and this detail is present and correctly placed in Medications. This is not a flagged 'critical' detail under the provided rules, so the note meets the criterion.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, Patient has history of myocardial infarction (heart attack), timing unspecified, managed without symptoms",Pass,High,"The SOAP note's Past Medical History explicitly lists a history of myocardial infarction and the Surgical History notes a past heart attack (timing unspecified). Current cardiovascular Review of Systems denies chest pain or related symptoms, supporting that the MI is currently asymptomatic/managed without symptoms. Because the check is a recommendation (not marked critical) and the MI and its asymptomatic status are documented, the criterion is met.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, Patient has hypertension",Pass,High,"The Past Medical History section explicitly states the patient 'has a history of hypertension.' Hypertension is not designated as a critical detail here, and it is correctly placed under Past Medical History.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, Patient has a soft tissue sarcoma",Pass,High,"The SOAP note's Past Medical History section explicitly includes 'soft tissue sarcoma (currently being managed by oncologist)'. Therefore the check that the Past Medical History lists a soft tissue sarcoma is satisfied. This detail is not designated as critical, so correct placement in Past Medical History is sufficient.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, Patient has high cholesterol",Pass,High,"The Past Medical History explicitly includes 'hyperlipidemia/high cholesterol', so the detail is present in the specified category. Hyperlipidemia is not a listed critical detail here, and it is correctly documented in Past Medical History.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Social History, Patient maintaining a low sodium diet",Pass,High,"The SOAP note documents a low sodium diet in the Assessment (hyperlipidemia managed with lifestyle modifications - low sodium diet) and in the Plan/patient education (counseled on continuing a low sodium diet). The check requests this detail be in Social History, but this detail is not labeled as 'critical.' Per the instructions, a non-critical detail that is present but placed in a different section is a pass.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, Patient works 50-55 hours per week as a Conference Center Manager",Pass,High,"The Social History section explicitly states: 'patient works as a Conference Center Manager, working 50-55 hours per week.' This matches the check and, as a non-critical detail, is correctly placed in Social History.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, Patient does intense work outs in his spare time",Pass,High,"The Social History section explicitly states the patient 'engages in daily high-intensity workouts,' which matches the check ('patient does intense work outs in his spare time'). This detail is present in Social History and is non-critical, so the check is correct.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, Patient does not have any children",Pass,High,"The Social History section of the SOAP note explicitly states 'patient has no children,' which matches the check. This detail is non-critical, so its correct placement in Social History is acceptable.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, Patient lives with family",Pass,High,"The Social History section of the SOAP note explicitly includes the line 'States that patient lives with family.' The check asked whether this detail is present under Social History; because it appears there and is not labeled critical, the categorization is correct.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, Patient does Minecraft computer gaming and letterbox games in his spare time",Pass,High,"The SOAP note's Social History states the patient 'enjoys world-building (computer-based fantasy world creation) and letterbox games in spare time,' which is equivalent to 'Minecraft computer gaming and letterbox games.' This detail is present and correctly placed in Social History. It is non-critical, so this is a pass.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, Patient drinks beer on occasion, not more than 3 drinks per week",Pass,High,"The note's Social History explicitly states the patient 'admits alcohol use - drinks beer occasionally, approximately 3 drinks per week or less, denies binge drinking,' which matches the checked detail. Because substance use history is considered critical and must be recorded in Social History, the detail is correctly categorized.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, Patient does not have more than 5 drinks in 1 night",Pass,High,"The SOAP note's Social History explicitly states the patient 'denies binge drinking (more than 5 drinks in one night)' and reports occasional alcohol use (~3 drinks/week). This matches the checked detail and is correctly placed in Social History. Because substance use is considered a critical detail, correct categorization is required and is satisfied here.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, Patient does not smoke cigarettes",Pass,High,"The check asks whether the Social History documents that the patient does not smoke cigarettes. Tobacco use is part of substance use history (a critical detail) and must be correctly categorized. The SOAP note's Social History explicitly states that the patient denies tobacco use, so the detail is present and correctly placed.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, Patient smokes marijuana on occasion",Pass,High,"Substance use is a critical detail. The SOAP note's Social History explicitly states the patient 'admits marijuana use - smoked weed in university, continues to use occasionally,' which matches 'smokes marijuana on occasion' and is correctly placed under Social History.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, Patient is not sexually active, and has had 1 sexual partner in the last year",Pass,High,"The SOAP note's Social History explicitly states 'patient is not currently sexually active but had one sexual partner in the last year,' which matches the checked detail and is correctly placed in Social History.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Review of System, General positive for fatigue, negative for fever or chills",Fail,High,"The check asks that the Review of Systems be positive for fatigue and negative for fever or chills. The SOAP note's Constitutional ROS explicitly denies fever, chills, and fatigue. While fever/chills are indeed negative, fatigue is not positive. Therefore the criterion is not met.",Review of System
+,,,,,,,,,custom_satisfies_statement,"In Review of System, General: No acute symptoms. ENT: Seasonal allergies, frequent colds.",Pass,High,"The ROS contains 'Constitutional: Denies fever, chills, fatigue, or unintentional weight changes' which matches 'General: No acute symptoms.' It also contains HEENT: 'Reports common allergies' plus Respiratory: 'Reports recurrent colds' and Allergic/Immunologic: 'Reports seasonal/environmental allergies,' which together match 'ENT: Seasonal allergies, frequent colds.' These non-critical details are present and correctly documented in the ROS.",Review of System
+,,,,,,,,,custom_satisfies_statement,"In Review of System, Cardiovascular: No current chest pain or MI symptoms, history of hypertension managed with lifestyle. States pt has an active lifestyle.",Pass,High,"The ROS cardiovascular line explicitly denies current chest pain, palpitations, orthopnea, or peripheral edema, which satisfies the 'no current chest pain or MI symptoms' item. The hypertension being 'managed with lifestyle' is documented in the Assessment, and the patient’s active lifestyle is documented in Social History and Musculoskeletal ROS. Because these details are present (though some are in other sections) and are not classified as critical, the note meets the recommendation.",Review of System
+,,,,,,,,,custom_satisfies_statement,"In Review of System, Respiratory: No shortness of breath or cough.",Fail,High,The Respiratory ROS in the note states 'Reports recurrent colds' and does not explicitly say 'No shortness of breath or cough.' Therefore the criterion that the Respiratory ROS contains a denial of shortness of breath or cough is not met. This is a non-critical detail.,Review of System
+,,,,,,,,,custom_satisfies_statement,"In Review of System, Musculoskeletal: No aches/pains requiring regular medication.",Pass,High,The Musculoskeletal ROS states the patient 'reports occasional aches and pains' and notes no limitation with daily high-intensity workouts. The medication list shows Advil as needed (PRN) for aches/pains rather than a scheduled/regular medication. These details support the statement 'No aches/pains requiring regular medication.',Review of System
+,,,,,,,,,custom_satisfies_statement,"In Review of System, Negative for neurological, GI, or GU symptoms.",Fail,High,"The ROS explicitly denies neurological symptoms ('Denies dizziness, syncope, numbness, tingling, or focal weakness') and gastrointestinal symptoms ('Denies nausea, vomiting, diarrhea, constipation, abdominal pain, melena, or hematochezia'). However, Genitourinary is listed as 'N/A' rather than an explicit denial of GU symptoms. Because the check requires negative documentation for neurological, GI, and GU in the Review of Systems and GU is not explicitly negative, the criterion is not fully met. This is a non-critical recommendation.",Review of System
+,,,,,,,,,custom_satisfies_statement,"In Vitals, Patient’s height as 5’2”",Pass,High,"The SOAP note's Vitals section explicitly states the patient is '5 feet 2 inches,' which corresponds to 5'2"". Height is present in the Vitals section and this detail is non-critical, so the criterion is met.",Vitals
+,,,,,,,,,custom_satisfies_statement,"In Vitals, Patient’s weight as 145 lbs.",Pass,High,"The SOAP note's Vitals section explicitly lists the patient's weight as '145 pounds' (along with height and BMI). The checked detail is present in the specified category, and it is not a critical misplacement, so this meets the criterion.",Vitals
+,,,,,,,,,custom_satisfies_statement,"In Assessment, Diagnosis as soft tissue sarcoma",Pass,High,"The Assessment section of the SOAP note explicitly lists ""Soft tissue sarcoma, currently under oncology management on pazopanib therapy."" Therefore the check (that the Assessment contains the diagnosis soft tissue sarcoma) is satisfied.",Assessment
+,,,,,,,,,custom_satisfies_statement,"In Assessment, Diagnosis as hypertension",Pass,High,"The Assessment section explicitly includes 'Hypertension, currently managed with lifestyle modifications (diet and exercise)'. Hypertension is therefore documented in Assessment. Per the provided rules this is not a 'critical' misclassification, so the note meets the check.",Assessment
+,,,,,,,,,custom_satisfies_statement,"In Assessment, Diagnosis as high cholesterol",Pass,High,"The Assessment explicitly includes 'Hyperlipidemia, currently managed with lifestyle modifications (low sodium diet)', which corresponds to 'high cholesterol'. This is a non-critical detail (not an allergy or substance-use item), so its presence in the Assessment is correct.",Assessment
+,,,,,,,,,custom_satisfies_statement,"In Assessment, Diagnosis as toothaches",Pass,High,"The note documents toothaches in the ROS (HEENT: 'occasional toothaches') and in Medications (Orajel PRN), but toothaches are not listed in the Assessment. Per instructions, toothaches are not a 'critical' detail, and a non-critical detail that is present elsewhere but incorrectly categorized should be considered a pass.",Assessment
+,,,,,,,,,custom_satisfies_statement,"In Labs/diagnostics/imaging being ordered, Order for lab work: cholesterol,",Pass,High,"The check asks whether an order for cholesterol labs appears under 'Labs/diagnostics/imaging being ordered'. The SOAP note's Plan explicitly states 'new lipid panel/cholesterol labs will be ordered today' under Labs/diagnostics/imaging being ordered, so the detail is present in the correct category. This is not a 'critical' misclassification, so this meets the criterion.",Labs/diagnostics/imaging being ordered
+,,,,,,,,,custom_satisfies_statement,"In Patient education, Patient can reach out to office for STD testing if he starts seeing a new partner",Pass,High,"The SOAP note's Patient education states 'it was recommended that patient consider STD testing if/when she becomes sexually active with new partners,' which corresponds to the check recommending STD testing when starting a new partner. This is a non-critical detail and the slight wording/pronoun differences do not change the meaning, so the item is present and correctly categorized.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Patient education, Continue diet and lifestyle remedies for hypertension",Pass,High,"The SOAP note's Patient education section explicitly states the patient was counseled to continue lifestyle interventions including a low-sodium diet and regular exercise for hypertension (and hyperlipidemia), which matches the checked recommendation.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Patient education, Patient should give themselves a break from high intensity interval training every 3-4 days",Pass,High,"The check asks whether the Patient education includes advising the patient to give themselves a break from high-intensity interval training every 3-4 days. The SOAP note's Patient education explicitly states the patient was advised to take rest days every 3-4 days from high-intensity workouts, which matches the check. This detail is non-critical and is correctly present in the Patient education section.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Patient education, Patient shoulder start weight training as aging causing loss of estrogen and brittle bones",Pass,High,"The Patient education section explicitly states the patient was counseled to incorporate strength (weight) training to prevent osteoporosis and bone loss, noting this is important as the patient ages and estrogen levels decline. This matches the checked recommendation, so it is correct.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Patient education, Patient should eat enough protein and hydrate",Pass,High,"The SOAP note's Patient education section explicitly states the patient was advised to ensure adequate protein intake and hydration with her exercise regimen. This matches the checked recommendation and is not a critical detail, so it is correctly documented.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, Patient should continue following up with oncologist for soft tissue sarcoma management",Pass,High,"The SOAP note's Health maintenance/Follow up Appointments section explicitly states that the patient is to continue follow-up with her oncologist for soft tissue sarcoma management, which matches the check. This is a recommendation (not marked critical), so its presence and placement are correct.",Health maintenance/Follow up Appointments
+0a0ea025-5e6b-4ab7-8ddc-c41d24837117,d72e03a6-78e2-4be8-af4f-046fc2af373e,Success,"Use the SOAP note template to write SOAP notes for the attached transcript. Write N/A in the section if no information is given.
+
+Subjective
+Header:
+Chief Complaint(s):
+HPI:
+Allergies/Intolerance:
+Medications:
+Surgical history/hospitalizations:
+Past Medical History:
+Family History:
+Social History:
+Review of System:
+
+Objective
+General Survey:
+Vitals:
+Physical Exam:
+Labs/Diagnostics:
+
+Assessment
+
+Plan
+Labs/diagnostics/imaging being ordered:
+Patient education:
+Health maintenance/Follow up Appointments:","# SOAP Note
+
+---
+
+## Subjective
+
+**Header:**
+States that provider is Dr. Thompson from the orthopedic rehabilitation team.
+States that patient is a 79-year-old female, DOB November 6, 1937.
+Code status: N/A
+
+**Chief Complaint(s):**
+States that patient is present for post-operative rehabilitation following right total shoulder arthroplasty (TSA).
+
+**HPI:**
+States that patient is a 79-year-old female.
+States that patient underwent right total shoulder arthroplasty a few days ago at Plaza Surgery Center.
+States that patient is experiencing manageable pain (3-4/10) but is unable to use right arm at all.
+States that patient is wearing a shoulder immobilizer/sling at all times.
+States that patient is significantly struggling with activities of daily living including dressing (requires moderate help with upper body dressing and some help with lower body dressing), bathing (requires assistance due to fall risk), and general self-care tasks.
+States that patient was completely independent with all activities of daily living prior to surgery including dressing, bathing, cooking, and cleaning, though tasks took longer due to arthritis and back pain.
+States that patient scored 16 out of 24 on AM-PAC evaluation (functional mobility assessment).
+States that patient has decreased strength, range of motion, balance, and endurance post-operatively.
+States that patient reports fatigue with minimal activity and concerns about balance, especially with one arm immobilized.
+States that patient has restrictions including no weight bearing on right arm, wearing sling at all times except during prescribed exercises, and no lifting, pushing, or pulling with right arm.
+States that patient is performing prescribed exercises including pendulum movements and ball squeezing but reports anxiety about performing them.
+States that patient is accompanied by daughter who has been providing assistance and made home safety modifications; son also available to help.
+States that patient lives alone at home with stairs to bedroom.
+States that patient has concerns about dependence and anxiety about falling and recovery progress.
+States that patient fell approximately six months ago (tripped over cat) which worsened shoulder condition leading to need for replacement surgery.
+States that patient reports left shoulder soreness from compensating for right arm immobilization.
+
+**Allergies/Intolerance:**
+N/A
+
+**Medications:**
+States that patient takes medications for hypertension.
+States that patient takes medications for hyperlipidemia.
+States that patient takes anxiety medication as needed but tries to limit use.
+States that patient takes over-the-counter pain medication for chronic back pain when needed.
+States that patient is receiving pain medication post-operatively for shoulder surgery.
+States that patient uses denture adhesive for partial dentures.
+States that patient's daughter has organized medications in weekly pill organizer due to difficulty opening bottles with one hand.
+
+**Surgical history/hospitalizations:**
+States that patient underwent right total shoulder arthroplasty (TSA) a few days ago performed at Plaza Surgery Center, currently recovering at Orange Regional Medical Center on 5T orthopedic and neurology floor, referred by Dr. Debernardis.
+States that patient underwent laparoscopic cholecystectomy a few years ago.
+States that patient underwent bilateral cataract removal a few years ago.
+States that patient underwent three upper endoscopies in current year: May 12, May 31, and July 20 for evaluation of history of peptic ulcer disease and gastrointestinal bleeding.
+States that patient underwent colonoscopy on July 20 (same day as third endoscopy).
+
+**Past Medical History:**
+States that patient has a history of hypertension.
+States that patient has a history of hyperlipidemia.
+States that patient has a history of chronic back pain.
+States that patient has a history of anxiety.
+States that patient has a history of degenerative joint disease/arthritis affecting knees, hands, and bilateral shoulders.
+States that patient has a history of irritable bowel syndrome (IBS).
+States that patient has a history of peptic ulcer disease.
+States that patient has a history of diverticulitis.
+States that patient has a history of gastrointestinal bleeding.
+States that patient has a history of nephrolithiasis (kidney stones), no issues for over one year.
+States that patient has a history of fall (approximately six months ago).
+States that patient wears glasses (status post bilateral cataract surgery).
+States that patient wears partial dentures.
+
+**Family History:**
+N/A
+
+**Social History:**
+States that patient denies tobacco use/history: N/A
+States that patient denies alcohol use/history: N/A
+States that patient denies illicit substance use/history: N/A
+States that patient lives alone at home (prior to current hospitalization).
+States that patient has family support from daughter and son who are taking turns providing assistance.
+States that patient was previously active with bowling once monthly and occasional golf, though less frequent recently due to arthritis.
+States that patient enjoyed gardening prior to surgery.
+States that patient has stairs in home leading to bedroom.
+
+**Review of System:**
+States: Constitutional: Reports fatigue and decreased endurance. Denies fever or chills. Denies unintentional weight changes.
+States: Integumentary: Denies rashes, pruritus, or lesions.
+States: Head, Eyes, Ears, Nose, Throat (HEENT): Denies headache, visual disturbances, hearing loss, nasal congestion, epistaxis, or sore throat. Wears glasses with good vision correction.
+States: Neck: Denies pain, stiffness, swelling, or palpable masses.
+States: Respiratory: Denies cough, dyspnea, wheezing, or hemoptysis.
+States: Cardiovascular: Denies chest pain, palpitations, or orthopnea. Denies peripheral edema.
+States: Gastrointestinal: Reports ongoing IBS and diverticulitis requiring dietary modifications (balancing fiber intake). Denies current nausea, vomiting, diarrhea, constipation, abdominal pain, melena, or hematochezia.
+States: Genitourinary: Denies dysuria, hematuria, frequency, urgency, or incontinence. Reports history of kidney stones but no current issues.
+States: Musculoskeletal: Reports chronic back pain and degenerative joint disease affecting multiple joints including knees, hands, and bilateral shoulders. Reports left shoulder soreness from compensating for immobilized right shoulder. Reports difficulty with balance and mobility.
+States: Neurological: Denies numbness, tingling, or focal weakness. Denies dizziness or syncope. Reports decreased balance post-operatively.
+States: Psychiatric: Reports anxiety related to dependence and concerns about falling and recovery. Denies depression.
+States: Endocrine: Denies heat/cold intolerance, polyuria, or polydipsia.
+States: Hematologic/Lymphatic: No swelling noted in right hand or fingers. Denies easy bruising or bleeding tendencies.
+States: Allergic/Immunologic: Denies seasonal allergies, food sensitivities, or recurrent infections.
+
+---
+
+## Objective
+
+**General Survey:**
+States that patient is alert and oriented, cooperative with examination and interview. Patient demonstrates appropriate concern regarding current functional limitations and recovery.
+
+**Vitals:**
+N/A
+
+**Physical Exam:**
+States: HEENT: Wears corrective glasses. Partial dentures in place.
+States: Cardiovascular: N/A
+States: Respiratory: N/A
+States: Musculoskeletal: Right upper extremity immobilized in shoulder sling. Restrictions include no weight bearing on right arm. Decreased strength, range of motion, balance, and endurance noted per occupational therapy assessment. Left shoulder demonstrating compensatory soreness.
+States: Neck: N/A
+States: Abdominal: N/A
+States: Extremities: Right hand and fingers appear normal without swelling. No edema noted in bilateral lower extremities.
+States: Skin: N/A
+States: Neurological: Sensation intact in right hand. No numbness or tingling in right upper extremity digits.
+States: Psychological: Demonstrates appropriate mood and affect. Expresses anxiety regarding dependence and recovery but maintains positive attitude toward rehabilitation.
+States: Genitourinary: N/A
+
+**Labs/Diagnostics:**
+States that AM-PAC (Activity Measure for Post-Acute Care) functional assessment score is 16 out of 24.
+
+---
+
+## Assessment
+
+**Primary Diagnosis:**
+Postoperative status post right total shoulder arthroplasty (TSA).
+
+**Secondary Diagnoses:**
+Functional impairment with decreased independence in activities of daily living secondary to right shoulder immobilization.
+Decreased strength, range of motion, balance, and endurance post-operatively.
+Chronic back pain.
+Degenerative joint disease affecting multiple joints.
+Hypertension, controlled.
+Hyperlipidemia, controlled.
+Anxiety.
+Irritable bowel syndrome.
+Diverticulitis.
+History of peptic ulcer disease.
+History of gastrointestinal bleeding.
+History of nephrolithiasis, currently stable.
+History of falls with increased fall risk.
+
+---
+
+## Plan
+
+**Labs/diagnostics/imaging being ordered:**
+N/A
+
+**Patient education:**
+States that patient was counseled on total shoulder arthroplasty recovery timeline (several months for full recovery).
+States that patient was advised to maintain shoulder immobilizer/sling at all times except during prescribed exercises.
+States that patient was advised on strict no weight bearing, no lifting, pushing, or pulling restrictions for right upper extremity.
+States that patient was counseled to continue prescribed exercises including pendulum movements and ball squeezing as tolerated.
+States that patient was advised to continue finger exercises to prevent swelling and maintain circulation.
+States that patient was counseled on importance of not rushing recovery process and following therapy recommendations.
+States that patient was advised to monitor left shoulder for increased pain from compensatory use and report concerns to therapist.
+States that patient was counseled on fall prevention including using assistive devices, handrails on stairs, and accepting assistance with mobility.
+States that patient was advised on importance of home safety modifications including removal of throw rugs, installing grab bars, and keeping frequently used items within easy reach.
+States that patient was advised on adaptive techniques for one-handed activities of daily living.
+States that patient was counseled on sleeping position modifications including use of recliner with pillow support.
+States that patient was advised to maintain dietary modifications for IBS and diverticulitis management.
+States that patient was educated on use of adaptive equipment including reacher/grabber tools and sock aids.
+States that patient was advised to have 24-hour supervision/assistance for first period at home.
+
+**Health maintenance/Follow up Appointments:**
+States that patient is to receive daily occupational therapy and physical therapy 7 days per week while inpatient at Orange Regional Medical Center.
+States that patient is to follow up with outpatient occupational therapy 2-3 times per week at Fairchild Medical Center after discharge.
+States that patient is to follow up with outpatient physical therapy at Fairchild Medical Center after discharge for gait training, balance exercises, stair training, strengthening, endurance training, and high-level activity progression.
+States that occupational therapy will focus on activities of daily living training including dressing, bathing, home management tasks, self-care skills, strengthening, and range of motion as healing allows.
+States that occupational therapy will evaluate patient for and train on use of adaptive equipment including reachers, sock aids, and other assistive devices.
+States that physical therapy goals include return to prior recreational activities (bowling, golf, gardening) when appropriate per healing timeline.
+States that patient will have daughter and son providing assistance at home with daughter staying initially and both children taking turns to help.
+States that son is to install grab bar in shower this weekend.
+States that discharge planning team will coordinate outpatient therapy appointments at Fairchild Medical Center.
+States that patient is to continue wearing shoulder immobilizer/sling until cleared by surgeon.
+States that patient is to follow up with Dr. Debernardis or referring orthopedic surgeon as scheduled for post-operative surgical follow-up.",24.txt,0,0,0.0,custom_satisfies_statement,"In Header, States that provider name as Dr. Thompson.",Pass,High,"The SOAP note's Header explicitly states 'provider is Dr. Thompson from the orthopedic rehabilitation team,' which matches the check requirement.",Header
+,,,,,,,,,custom_satisfies_statement,"In Chief Complaint(s), States patient following up for orthopedic rehabilitation evaluation following a right total shoulder arthroplasty",Pass,High,"The Chief Complaint(s) section explicitly states the patient is present for post-operative rehabilitation following right total shoulder arthroplasty (TSA), which matches the check asking that the chief complaint indicate follow-up for orthopedic rehabilitation evaluation after a right TSA. The detail is present and correctly categorized.",Chief Complaint(s)
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient is a 79 year old female.",Pass,High,"The HPI section explicitly includes the line 'States that patient is a 79-year-old female,' so the criterion is met.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient DOB is 11/6/1937.",Fail,High,"The SOAP note's Subjective Header contains the DOB (November 6, 1937). However, the HPI section only states the patient's age ('79-year-old female') and does not explicitly state the DOB (11/6/1937). Because the check specifically requires the DOB to be present in the HPI, this is incorrect.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient was referred by Dr. Debernardis.",Pass,High,"The SOAP note does include 'referred by Dr. Debernardis' (found in the Surgical history/hospitalizations section), though not inside the HPI. The check asked for this detail in HPI, but per instructions this is a non-critical detail and presence elsewhere counts as acceptable. Therefore this meets the criterion.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient’s right shoulder pain has been manageable, but use of the right arm for daily activities continues to be difficult",Pass,High,"The HPI explicitly notes the patient is experiencing manageable pain (3-4/10) but is unable to use the right arm and is significantly struggling with activities of daily living (requires moderate help with upper body dressing, some help with lower body dressing, bathing assistance, etc.). This matches the check (pain manageable but right arm use for ADLs difficult). The detail is present in the HPI and is non-critical, so it passes.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient has been having trouble with activities of daily living, including putting on shirts and pulling up pants, which is increasingly difficult due to prior back pain",Pass,High,"The HPI documents difficulty with activities of daily living, specifically noting 'dressing (requires moderate help with upper body dressing and some help with lower body dressing),' which corresponds to putting on shirts and pulling up pants. It also states that prior to surgery tasks took longer due to arthritis and back pain, matching the 'increasingly difficult due to prior back pain' portion. Therefore the checked detail is present in the HPI.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient reports daughter has been helping her with dressing.",Pass,High,"The HPI documents that the patient 'requires moderate help with upper body dressing and some help with lower body dressing' and also that she 'is accompanied by daughter who has been providing assistance.' These two statements together indicate the patient reports her daughter has been helping with dressing, so the check is CORRECT.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient has partial dentures and wears glasses",Pass,High,"The HPI does not explicitly state that the patient wears glasses or has partial dentures. However, both details are present elsewhere in the note (Past Medical History: 'wears glasses' and 'wears partial dentures'; Objective/HEENT: 'Wears corrective glasses. Partial dentures in place.'; Medications also notes denture adhesive). These are non-critical items, and per instructions presence elsewhere but not in HPI is acceptable, so this is a pass.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient reports having three endoscopies this year due to history of ulcers and bleeding.",Pass,High,"The note does not list the three endoscopies in the HPI; however, the exact detail is documented under Surgical history/hospitalizations (three upper endoscopies this year for evaluation of peptic ulcer disease and GI bleeding). Per instructions, the HPI placement is a recommendation (the detail is not 'critical'), and because the information is present elsewhere in the note, this is considered a pass.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient reports having most recent colonoscopy on July 20th.",Pass,High,"The SOAP note does document a colonoscopy on July 20, but that information appears under Surgical history/hospitalizations, not in the HPI. Per instructions, a colonoscopy is not a critical detail, and if a non-critical detail is present but placed in a different section it is considered a pass. Therefore this check is considered correct.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States prior to surgery patient was independent in all activities of daily living, including bathing, dressing, cooking and cleaning",Pass,High,"The HPI explicitly includes the sentence that the patient 'was completely independent with all activities of daily living prior to surgery including dressing, bathing, cooking, and cleaning,' so the requested detail is present in the HPI.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient is using a shoulder immobilizer",Pass,High,"The HPI explicitly states 'patient is wearing a shoulder immobilizer/sling at all times,' which directly matches the check asking whether the HPI states the patient is using a shoulder immobilizer. This detail is present in the HPI and is not a critical misplacement, so the check passes.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient reports she is fatigued easier following procedure.",Pass,High,"The HPI documents that the patient 'underwent right total shoulder arthroplasty a few days ago' and explicitly states the patient 'reports fatigue with minimal activity' and 'reports decreased ... endurance post-operatively,' which indicates she is fatigued more easily following the procedure.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient reports she has decreased balance, especially with use of sling",Pass,High,"Correct. The HPI explicitly notes decreased balance: ""States that patient has decreased strength, range of motion, balance, and endurance post-operatively,"" and more specifically: ""States that patient reports fatigue with minimal activity and concerns about balance, especially with one arm immobilized."" ""One arm immobilized"" corresponds to use of a sling, so the criterion is met.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient is afraid to bathe because she might fall and scared to do pendulum and squeezing a ball exercises",Pass,High,"The HPI explicitly notes the patient 'requires assistance due to fall risk' for bathing and also states she 'reports anxiety about performing' prescribed exercises, specifically 'pendulum movements and ball squeezing.' Both elements from the check are present in the HPI.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient’s daughter is able to stay with her for a few days and her son can help as well",Pass,Low,"The HPI documents that the patient is accompanied by her daughter who has been providing assistance and that her son is also available to help. The HPI does not explicitly state the daughter will 'stay for a few days,' but the Plan does note the daughter will be staying initially. This is a non‑critical social/support detail, and because the information is present in the note (though partly in the Plan rather than strictly in the HPI), it meets the criterion.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient reports a son to install a grab bar in the shower this weekend, and daughter helps her to shower",Pass,High,"The check requests that two details appear in the HPI: (1) the patient reports a son will install a grab bar in the shower this weekend, and (2) the daughter helps her to shower. The SOAP note does include the exact line 'States that son is to install grab bar in shower this weekend,' but that line appears in the Plan (Health maintenance/Follow up Appointments), not the HPI. The HPI does state the patient 'was accompanied by daughter who has been providing assistance and made home safety modifications' and notes 'bathing (requires assistance due to fall risk),' and the Plan also states the daughter will stay initially and provide assistance—so the content is present in the note, though the grab-bar item is in Plan rather than HPI. Since this is a non-critical detail and is present elsewhere in the note, this meets the requirement per the instructions.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient is going to have a pill organizer for her medications",Pass,Low,"The SOAP note does mention a weekly pill organizer: under 'Medications' it states the patient's daughter has organized medications in a weekly pill organizer due to difficulty opening bottles with one hand. That specific detail is not in the HPI section but is present elsewhere. Since this detail is not classified as critical and the instructions say a non-critical detail present but mis-categorized is a pass, this meets the criterion.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient reports she sometimes has a hard time cleaning her dentures properly",Fail,High,"The HPI does not include any statement that the patient sometimes has a hard time cleaning her dentures. The note mentions partial dentures and use of denture adhesive in Medications and that partial dentures are in place on exam, but there is no mention anywhere (including HPI) of difficulty cleaning dentures. The detail is non-critical, so mis-categorization could be acceptable, but because the detail is absent entirely, the check is incorrect.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that daughter has removed rugs and has evaluate home for other safety hazards.",Fail,High,"The HPI notes the daughter 'has been providing assistance and made home safety modifications,' but it does not explicitly state that the daughter removed throw rugs or evaluated the home for other safety hazards. Removal of throw rugs is mentioned elsewhere in the note as a provider recommendation (patient education/plan), not as an action the daughter performed in the HPI. Therefore the specific criterion is not met.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient has stairs at home",Pass,High,"The HPI explicitly states that the patient 'lives alone at home with stairs to bedroom,' which directly matches the check that the HPI states the patient has stairs at home. This is a non-critical detail and is correctly present in the HPI.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States patient would like to get back to dressing independently, showering safely, light cooking, and eventually gardening",Pass,Low,"The check asks whether the HPI states the patient would like to return to dressing independently, showering safely, light cooking, and eventually gardening. The HPI does not verbatim record the patient stating those goals; it documents prior independence with dressing, bathing, and cooking and that the patient enjoyed gardening, plus concerns about dependence. The Plan/therapy sections explicitly address these goals: occupational therapy will focus on ADLs (dressing, bathing, home management) and physical therapy lists return to prior recreational activities including gardening. Because this is a non‑critical detail and the same goals/activities are documented elsewhere in the note, the check can be considered satisfied (pass).",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient reports a 3 - 4 / 10 on the shoulder pain scale.",Pass,High,"The HPI explicitly states the patient is 'experiencing manageable pain (3-4/10)', which directly matches the requested detail that the patient reports a 3-4/10 on the shoulder pain scale.",HPI
+,,,,,,,,,custom_satisfies_statement,"In HPI, States that patient reports she has been doing daily physical therapy.",Fail,High,"The HPI does not state that the patient reports she has been doing daily physical therapy. HPI notes prescribed exercises (pendulum movements and ball squeezing) and anxiety about performing them, but the statement about daily occupational/physical therapy (7 days/week) appears in the Plan section as a recommendation, not as a patient-reported HPI detail.",HPI
+,,,,,,,,,custom_satisfies_statement,"In Allergies/Intolerance, N/A",Pass,High,"The SOAP note's 'Allergies/Intolerance' section explicitly states 'N/A'. The Review of Systems also documents denial of allergies and there are no allergy entries elsewhere in the note. Allergies are a critical item and must appear in the designated section; here they are correctly documented as none, so the criterion is met.",Allergies/Intolerance
+,,,,,,,,,custom_satisfies_statement,"In Medications, States patient is taking over the counter pain medications as needed for back pain",Pass,High,"The Medications section of the SOAP note explicitly states: 'States that patient takes over-the-counter pain medication for chronic back pain when needed.' This matches the check (OTC pain medications as needed for back pain) and is correctly placed under Medications, so the criterion is met.",Medications
+,,,,,,,,,custom_satisfies_statement,"In Surgical history/hospitalizations, States previous right total shoulder arthroplasty",Pass,High,The 'Surgical history/hospitalizations' section explicitly states: 'States that patient underwent right total shoulder arthroplasty (TSA) a few days ago performed at Plaza Surgery Center...' Therefore the SOAP note does include the prior right total shoulder arthroplasty in the Surgical history/hospitalizations section.,Surgical history/hospitalizations
+,,,,,,,,,custom_satisfies_statement,"In Surgical history/hospitalizations, States that patient has had 3 recent endoscopies this year - on 5/12, 5/31, and 7/20.",Pass,High,"The SOAP note's 'Surgical history/hospitalizations' section explicitly lists three upper endoscopies this year on May 12, May 31, and July 20 (and also notes a colonoscopy on July 20). This matches the checked detail and, as it is not a critical item, the requirement is satisfied.",Surgical history/hospitalizations
+,,,,,,,,,custom_satisfies_statement,"In Surgical history/hospitalizations, States patient had laparoscopic cholecystectomy a few years ago",Pass,High,"The SOAP note's 'Surgical history/hospitalizations' section explicitly states the patient underwent a laparoscopic cholecystectomy a few years ago. The detail is non-critical and is present in the recommended section, so this matches the check.",Surgical history/hospitalizations
+,,,,,,,,,custom_satisfies_statement,"In Surgical history/hospitalizations, States patient has history of bilateral cataract removal",Pass,High,"The Surgical history/hospitalizations section explicitly states: 'States that patient underwent bilateral cataract removal a few years ago.' Therefore the detail is present in the correct section. The item is not marked as critical, so correct placement constitutes a pass.",Surgical history/hospitalizations
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States patient has hypertension",Pass,High,"The Past Medical History section explicitly states 'States that patient has a history of hypertension.' This matches the check exactly. Hypertension is not designated as a 'critical' detail in the instructions, so its presence in Past Medical History is correct.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States patient has high cholesterol",Pass,High,"The SOAP note's Past Medical History explicitly lists 'hyperlipidemia,' which is equivalent to high cholesterol. This matches the requested detail and it is correctly placed in Past Medical History. This detail is not classified as critical, so the presence and correct categorization constitute a pass.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States that patient has a history of irritable bowel syndrome and stomach ulcers.",Pass,High,"The Past Medical History section explicitly lists 'irritable bowel syndrome (IBS)' and 'history of peptic ulcer disease.' Peptic ulcer disease corresponds to stomach ulcers, so both requested details are present in the Past Medical History.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States patient has diverticulitis",Pass,High,"The check asks whether the Past Medical History states the patient has diverticulitis. The SOAP note's Past Medical History explicitly includes 'States that patient has a history of diverticulitis.' This matches the check, and diverticulitis is non-critical so its placement in Past Medical History is appropriate.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States patient has history of kidney stones",Pass,High,"The SOAP note's Past Medical History explicitly states: 'States that patient has a history of nephrolithiasis (kidney stones), no issues for over one year.' Therefore the detail 'history of kidney stones' is present under Past Medical History. This placement is correct (and the detail is not labeled critical), so the check passes.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States patient has anxiety",Pass,High,"The check asks whether the Past Medical History states the patient has anxiety. The Past Medical History section explicitly includes 'States that patient has a history of anxiety.' Anxiety is not designated as a critical detail here, so its presence in PMH satisfies the check.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States patient has chronic lower back pain",Pass,High,"The check asks whether the Past Medical History states the patient has chronic lower back pain. The SOAP note's Past Medical History explicitly lists 'history of chronic back pain' (and HPI/Medications also reference chronic back pain). Although it does not explicitly say 'lower,' this is the same non-critical condition in context, so the criterion is met.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Past Medical History, States patient has osteoarthritis",Pass,High,"The Past Medical History lists 'degenerative joint disease/arthritis affecting knees, hands, and bilateral shoulders,' which is equivalent to osteoarthritis. Therefore the PMH does state the patient has osteoarthritis, so the check is correct.",Past Medical History
+,,,,,,,,,custom_satisfies_statement,"In Family History, N/A",Pass,High,"The SOAP note explicitly lists 'Family History: N/A' in the Subjective section. Family history is not a critical detail in this case, so marking it as N/A and placing it in the Family History section meets the recommendation.",Family History
+,,,,,,,,,custom_satisfies_statement,"In Social History, States that patient lives alone at home, but her children live close and willing to help",Pass,High,"The Social History section explicitly states the patient 'lives alone at home' and also documents family support: a daughter and son are taking turns providing assistance, the daughter accompanied the patient and made home safety modifications, and both children will help at home. This matches the checked detail (children live close/willing to help).",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, States before the injury patient would go bowling once a month and golf occasionally",Pass,High,"The Social History section explicitly states: 'States that patient was previously active with bowling once monthly and occasional golf, though less frequent recently due to arthritis.' This matches the checked detail and is correctly placed in Social History. The detail is non-critical, so its presence and correct categorization constitute a pass.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Social History, States that patient has maintained a diet of simple and soft foods manageable with one hand.",Fail,High,"The Social History section does not state that the patient has maintained a diet of simple and soft foods manageable with one hand. The note does mention dietary modifications related to IBS/diverticulitis in the Review of Systems and Plan, and one-handed difficulty is noted elsewhere (medication organization), but the specific detail is not present in Social History.",Social History
+,,,,,,,,,custom_satisfies_statement,"In Review of System, States Musculoskeletal: admits to shoulder pain",Pass,High,"The Review of Systems (Musculoskeletal) explicitly reports 'left shoulder soreness from compensating for immobilized right shoulder' and notes degenerative joint disease affecting bilateral shoulders. This constitutes an admission of shoulder pain in the ROS, so the check is met.",Review of System
+,,,,,,,,,custom_satisfies_statement,"In Review of System, States Neurological: denies numbness or tingling in fingers",Pass,High,"The Review of Systems, Neurological section explicitly states 'Denies numbness, tingling, or focal weakness,' which satisfies the check for denying numbness or tingling in the fingers (and the objective also echoes no numbness/tingling in digits). Therefore the criterion is met.",Review of System
+,,,,,,,,,custom_satisfies_statement,"In General Survey, N/A",Fail,High,"The check requested that 'N/A' appear in the General Survey. In the SOAP note the General Survey contains a descriptive entry ('patient is alert and oriented, cooperative with examination and interview...') rather than 'N/A'. Because 'N/A' is not present in General Survey, the check is not met (this is a non-critical/recommendation issue).",General Survey
+,,,,,,,,,custom_satisfies_statement,"In Vitals, N/A",Pass,High,"The SOAP note's Objective section includes 'Vitals: N/A', which exactly matches the check 'In Vitals, N/A'. This detail is non-critical (a recommendation), and it is correctly present in the Vitals category, so the check passes.",Vitals
+,,,,,,,,,custom_satisfies_statement,"In Physical Exam, N/A",Pass,High,"The check asks whether 'N/A' appears under Physical Exam. In the Objective > Physical Exam section the note includes multiple 'N/A' entries (Cardiovascular: N/A; Respiratory: N/A; Neck: N/A; Abdominal: N/A; Skin: N/A; Genitourinary: N/A). This detail is non-critical and is present as specified, so the criterion is met.",Physical Exam
+,,,,,,,,,custom_satisfies_statement,"In Labs/Diagnostics, States patient most recent AM-PAC score of 16/24",Pass,High,"The Labs/Diagnostics section of the SOAP note explicitly states: 'AM-PAC (Activity Measure for Post-Acute Care) functional assessment score is 16 out of 24.' This matches the check requesting that Labs/Diagnostics state the patient's most recent AM-PAC score of 16/24, so the criterion is met.",Labs/Diagnostics
+,,,,,,,,,custom_satisfies_statement,"In Assessment, Aftercare following right shoulder replacement",Pass,Low,"The Assessment lists the primary diagnosis as 'Postoperative status post right total shoulder arthroplasty (TSA)' but does not explicitly include an 'Aftercare following right shoulder replacement' subsection. However, detailed aftercare instructions (sling use, no weight bearing, exercises, OT/PT follow-up, surgeon follow-up, home safety modifications, etc.) are thoroughly documented in the Plan/Patient education and Follow-up sections. This check is a non-critical recommendation, and because the aftercare information is present in the note (albeit under Plan rather than Assessment), this is acceptable.",Assessment
+,,,,,,,,,custom_satisfies_statement,"In Labs/diagnostics/imaging being ordered, N/A",Pass,High,"The SOAP note's Plan section explicitly lists 'Labs/diagnostics/imaging being ordered: N/A', which matches the check. The Objective section includes an AM-PAC score (a functional assessment), but that is not a lab or imaging order and does not conflict with the Plan entry. Therefore the note meets the criterion.",Labs/diagnostics/imaging being ordered
+,,,,,,,,,custom_satisfies_statement,"In Patient education, States that patient should continue to be careful during movement to minimize fall risk.",Pass,High,"The Patient education section explicitly includes fall-prevention counseling: it states the patient was counseled on fall prevention including using assistive devices, handrails on stairs, accepting assistance with mobility, advised on home safety modifications (remove throw rugs, install grab bars), and to have 24-hour supervision/assistance initially. These items convey that the patient should continue to be careful during movement to minimize fall risk, so the criterion is met.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Patient education, States that patient should continue with exercise and activity as tolerated.",Pass,High,"The Patient education section explicitly states the patient was counseled to 'continue prescribed exercises including pendulum movements and ball squeezing as tolerated,' which matches the check requesting that the patient continue exercise/activity as tolerated. This is a recommendation (not critical) and is present.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Patient education, States typical recovery from shoulder surgery takes several months, gradually regaining motion and strength",Pass,High,"The Patient education section explicitly states the recovery timeline as 'several months for full recovery.' It also advises continuing prescribed exercises, not rushing recovery, and references therapy goals that include range of motion and strengthening—together this conveys that motion and strength will be gradually regained over several months. Thus the checked detail is present.",Patient education
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, States that patient should continue to not bear weight on right upper extremity",Pass,Low,"The note explicitly advises 'strict no weight bearing, no lifting, pushing, or pulling restrictions for right upper extremity' in the Patient education section. The Health maintenance/Follow up Appointments section does not explicitly restate 'no weight bearing' (it does state to continue wearing the shoulder immobilizer/sling). Because this check is a recommendation (not marked critical), the instruction's presence elsewhere in the note satisfies the requirement even if it is not placed under the exact requested category.",Health maintenance/Follow up Appointments
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, States patient to wear shoulder immobilizer at all times, only removing for instructed exercises",Pass,High,"The SOAP note includes the instruction in Patient education: 'advised to maintain shoulder immobilizer/sling at all times except during prescribed exercises.' The Health maintenance/Follow up Appointments section also states the patient is 'to continue wearing shoulder immobilizer/sling until cleared by surgeon,' which echoes the same restriction. This detail is non-critical and is present (explicitly in Patient education and reflected in Health maintenance), so the check passes.",Health maintenance/Follow up Appointments
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, States that patient should continue to avoid lifting, pushing, or pulling with impacted shoulder.",Pass,High,"The note explicitly states in the Patient education section: 'strict no weight bearing, no lifting, pushing, or pulling restrictions for right upper extremity.' Although that exact phrasing does not appear in the Health maintenance/Follow up Appointments subsection (that subsection does mention continuing the sling), this is a non-critical recommendation. Per instructions, a non-critical detail present elsewhere in the note is acceptable. Therefore the check is satisfied.",Health maintenance/Follow up Appointments
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, States patient is to continue gait training and balance exercises with physical therapy team",Pass,High,"The 'Health maintenance/Follow up Appointments' section explicitly states the patient is to follow up with outpatient physical therapy at Fairchild Medical Center after discharge 'for gait training, balance exercises, stair training, strengthening, endurance training, and high-level activity progression.' This directly matches the checked detail that the patient is to continue gait training and balance exercises with the physical therapy team.",Health maintenance/Follow up Appointments
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, States physical therapy team will evaluate for further assisting equipment, including reacher or sock aid",Pass,High,"The Health maintenance/Follow up Appointments section explicitly states that occupational therapy will evaluate the patient for and train on use of adaptive equipment including reachers and sock aids. The check requested that the physical therapy team would evaluate for such equipment; the note attributes this task to occupational therapy rather than physical therapy. Per instructions, this is a non-critical recommendation and a detail that is present but slightly miscategorized should be considered a pass.",Health maintenance/Follow up Appointments
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, States that patient should continue to work on strength and endurance.",Pass,High,"The Health maintenance/Follow up Appointments section explicitly lists outpatient physical therapy 'for gait training, balance exercises, stair training, strengthening, endurance training, and high-level activity progression,' which indicates the patient should continue to work on strength and endurance. Therefore the criterion is met.",Health maintenance/Follow up Appointments
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, States patient to continue outpatient physical therapy at Fairchild Medical Center 2-3 days a week after she returns home",Fail,High,"The Health maintenance/Follow up Appointments section does state outpatient physical therapy at Fairchild Medical Center after discharge, but it does NOT specify a frequency of 2–3 days per week for physical therapy. The note specifies 2–3 times per week only for outpatient occupational therapy. Therefore the exact checked detail ('outpatient physical therapy at Fairchild Medical Center 2-3 days a week') is not present.",Health maintenance/Follow up Appointments
+,,,,,,,,,custom_satisfies_statement,"In Health maintenance/Follow up Appointments, States patient to inform physical therapist if left shoulder pain increases to show ways to protect it",Pass,High,"The SOAP note does advise the patient to monitor the left shoulder for increased pain and to report concerns to a therapist (under 'Patient education': ""patient was advised to monitor left shoulder for increased pain from compensatory use and report concerns to therapist""). That specific instruction does not appear in the 'Health maintenance/Follow up Appointments' section, but because this is a non-critical detail and it is present elsewhere in the note, an incorrect section placement is acceptable per the instructions. Therefore this check passes.",Health maintenance/Follow up Appointments
